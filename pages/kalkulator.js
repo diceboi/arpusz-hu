@@ -292,7 +292,7 @@ const handleSubmit = () => {
                           <button onClick={() => {fourthStep(); handleSubmit();}} className='py-2 px-4 bg-gradient-to-r from-[#06A452] to-[#0DC666] text-white border-transparent rounded-md'>Kérem az árat</button>
                         </div>
 
-                        <p className='text-sm'>A "Kérem az árat" gombra kattintva elfogadom az <a href='#' className='text-[#06a452] cursor-pointer'>adatkezelési tájékoztatóban</a> foglaltakat.</p>
+                        <p className='text-sm'>A Kérem az árat gombra kattintva elfogadom az <a href='#' className='text-[#06a452] cursor-pointer'>adatkezelési tájékoztatóban</a> foglaltakat.</p>
                     </div>
                 </div>
 
