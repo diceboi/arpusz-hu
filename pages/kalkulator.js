@@ -130,6 +130,13 @@ const calculatePrice = (type, thickness, area) => {
   const prices = type === "Nyitott cellás" ? openCellPrices : closedCellPrices;
   const priceCategory = getPriceCategory(area);
 
+  const thicknesses = Object.keys(prices[priceCategory]).map(Number).sort((a, b) => a - b);
+  const lowerIndex = thicknesses.findIndex(t => t >= thickness) - 1;
+  const upperIndex = lowerIndex + 1;
+
+  let lowerThickness = thicknesses[lowerIndex];
+  const upperThickness = thicknesses[upperIndex];
+
   // Az alapár kiszámítása a megadott vastagságon és árkategórián alapuló árakból
   const basePrice = prices[priceCategory][thickness];
 
@@ -139,8 +146,6 @@ const calculatePrice = (type, thickness, area) => {
 
   // Ha a vastagság köztes érték, akkor interpoláljuk a közeli vastagságok alapján az árat:
 
-  let lowerThickness = Math.floor(thickness / 10) * 10;
-  const upperThickness = Math.ceil(thickness / 10) * 10;
 
   // Ha zárt cellás, akkor figyelembe kell venni a 3 cm-es alsó korlátot
   if (type === "Zárt cellás" && lowerThickness < 3) {
@@ -162,16 +167,21 @@ const calculatePrice = (type, thickness, area) => {
 };
 
 const handleSubmit = () => {
-  let type = document.querySelector('input[name="status"]:checked').nextElementSibling.textContent;
-  let thickness = parseInt(value);
+  let type = document.querySelector('input[name="status"]:checked').dataset.type;
+  let thickness = parseInt(document.getElementById("vastagsag").value);
   let area = parseInt(document.getElementById("felulet").value);
   let vegsoar = document.getElementById('vegsoar');
+  let vatprice = document.getElementById('vatprice');
 
   if (!isNaN(thickness) && !isNaN(area)) {
     const totalPrice = calculatePrice(type, thickness, area);
     if (totalPrice !== null) {
       console.log({totalPrice});
+      const vatPrice = totalPrice * 1.27;
       // Itt megjelenítheti az árat a felhasználónak, például egy modalban vagy egy szövegcímkében
+      vegsoar.innerHTML = totalPrice;
+      vatprice.innerHTML = totalPrice * 1.27;
+      
     } else {
       console.log("Nem lehet kiszámolni az árat a megadott vastagság alapján.");
       // Itt jelezheti a felhasználónak, hogy nem lehet kiszámolni az árat
@@ -225,10 +235,10 @@ const handleSubmit = () => {
 
                         <fieldset className='flex gap-8 justify-center items-center w-full h-1/2'>
 
-                          <input id="draft" className="peer/draft hidden" type="radio" name="status" />
+                          <input id="draft" className="peer/draft hidden" type="radio" name="status" data-type="Nyitott cellás" />
                           <label htmlFor="draft" className="flex flex-col justify-center items-center border border-neutral-200 rounded-xl h-full p-8 hover:shadow-xl transition-all  cursor-pointer peer-checked/draft:bg-[#06A452] peer-checked/draft:text-white"><p className=' uppercase text-2xl font-black'>Nyitott cellás</p> púrhab szigetelés</label>
 
-                          <input id="published" className="peer/published hidden" type="radio" name="status" />
+                          <input id="published" className="peer/published hidden" type="radio" name="status" data-type="Zárt cellás"/>
                           <label htmlFor="published" className="flex flex-col justify-center items-center border border-neutral-200 rounded-xl h-full p-8 hover:shadow-xl transition-all  cursor-pointer peer-checked/published:bg-[#06A452] peer-checked/published:text-white"><p className=' uppercase text-2xl font-black'>Zárt cellás</p> púrhab szigetelés</label>
                         
                         </fieldset>
@@ -248,7 +258,7 @@ const handleSubmit = () => {
 
                           <Image width={100} height={100} alt='foamwidth' src={imageUrl}/>
                           <h1 className='font-black text-2xl'>{value} cm</h1>
-                          <input type="range" min="3" max="50" value={value} onInput={handleSliderChange} className='w-2/3 h-24 foamwidthslider'></input>
+                          <input id='vastagsag' type="range" min="3" max="30" value={value} onInput={handleSliderChange} className='w-2/3 h-24 foamwidthslider'></input>
                           
                         </div>
 
@@ -306,7 +316,7 @@ const handleSubmit = () => {
                             <p className='text-md uppercase'>nettó</p><h1 id='vegsoar' className='text-5xl font-black'></h1><p>Ft + ÁFA</p>
                           </div>
                           <div className='flex gap-2 items-baseline'>
-                            <p className='uppercase'>bruttó</p><h3 className='text-xl font-bold'>75000 Ft</h3>
+                            <p className='uppercase'>bruttó</p><h3 id='vatprice' className='text-xl font-bold'></h3><p>Ft</p>
                           </div>
                           
 
