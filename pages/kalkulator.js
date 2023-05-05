@@ -169,6 +169,8 @@ const calculatePrice = (type, thickness, area) => {
   return null;
 };
 
+useEffect(() => {
+
 const handleRadioChange = () => {
   let type = document.querySelector('input[name="status"]:checked').dataset.type;
   let thicknessInput = document.getElementById("vastagsag");
@@ -180,11 +182,18 @@ const handleRadioChange = () => {
   }
 };
 
-
 const radioButtons = document.querySelectorAll('input[name="status"]');
-radioButtons.forEach(button => {
-  button.addEventListener('change', handleRadioChange);
+radioButtons.forEach((button) => {
+  button.addEventListener("change", handleRadioChange);
 });
+
+return () => {
+  // Távolítsa el az eseménykezelőket, amikor a komponens eltávolításra kerül
+  radioButtons.forEach((button) => {
+    button.removeEventListener("change", handleRadioChange);
+  });
+};
+}, []);
 
 const handleSubmit = () => {
   let type = document.querySelector('input[name="status"]:checked').dataset.type;
@@ -279,7 +288,7 @@ const handleSubmit = () => {
                         <div className='flex flex-col gap-8 justify-center items-center w-full h-1/2'>
 
                           <Image width={100} height={100} alt='foamwidth' src={imageUrl}/>
-                          <h1 className='font-black text-2xl'>{value} cm</h1>
+                          <h1 id='vastagsagertek' className='font-black text-2xl'>{value} cm</h1>
                           <input id='vastagsag' type="range" min="3" max="30" value={value} onInput={handleSliderChange} className='w-2/3 h-24 foamwidthslider'></input>
                           
                         </div>
