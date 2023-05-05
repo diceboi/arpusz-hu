@@ -72,6 +72,7 @@ const calculatePrice = (type, thickness, area) => {
   const openCellPrices = {
     "0-100": {
       // vastagság: ár
+      3: 1500,
       10: 5000,
       15: 6500,
       20: 9500,
@@ -79,6 +80,7 @@ const calculatePrice = (type, thickness, area) => {
       30: 12700
     },
     "100-150": {
+      3: 1500,
       10: 4200,
       15: 5700,
       20: 7300,
@@ -86,6 +88,7 @@ const calculatePrice = (type, thickness, area) => {
       30: 9800
     },
     "150+": {
+      3: 1500,
       10: 4000,
       15: 5500,
       20: 7000,
@@ -166,6 +169,23 @@ const calculatePrice = (type, thickness, area) => {
   return null;
 };
 
+const handleRadioChange = () => {
+  let type = document.querySelector('input[name="status"]:checked').dataset.type;
+  let thicknessInput = document.getElementById("vastagsag");
+
+  if (type === "Zárt cellás") {
+    thicknessInput.max = "10";
+  } else {
+    thicknessInput.max = "30";
+  }
+};
+
+
+const radioButtons = document.querySelectorAll('input[name="status"]');
+radioButtons.forEach(button => {
+  button.addEventListener('change', handleRadioChange);
+});
+
 const handleSubmit = () => {
   let type = document.querySelector('input[name="status"]:checked').dataset.type;
   let thickness = parseInt(document.getElementById("vastagsag").value);
@@ -191,6 +211,8 @@ const handleSubmit = () => {
     // Itt jelezheti a felhasználónak, hogy hiányzik a vastagság vagy a terület értéke
   }
 };
+
+
 
 //Kalkulátor --------------------------------------------------
 
