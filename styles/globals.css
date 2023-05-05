@@ -2,26 +2,220 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  font-family: 'Inter';
+}
+
+/*Animations*/
+
+.legzaras-animation {
+  animation-name: legzaras;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes legzaras {
+  0%   {margin-top: 0lh; opacity: 1; filter: blur(0px); -webkit-filter: blur(0px);}
+  25%  {margin-top: -1lh; opacity: .15; filter: blur(2px); -webkit-filter: blur(2px);}
+  50%  {margin-top: -2lh; opacity: 0; filter: blur(0px); -webkit-filter: blur(0px)}
+  51%  {margin-top: 2lh; opacity: 0; filter: blur(0px); -webkit-filter: blur(0px)}
+  75%  {margin-top: 1lh; opacity: .15; filter: blur(2px); -webkit-filter: blur(2px);}
+  100% {margin-top: 0lh; opacity: 1; filter: blur(0px); -webkit-filter: blur(0px)}
+}
+
+.hoszigeteles-animation {
+  animation-name: hoszigeteles;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes hoszigeteles {
+  0%   {margin-top: 1lh; opacity: .15;filter: blur(2px); -webkit-filter: blur(2px);}
+  25%  {margin-top: 0lh; opacity: 1; filter: blur(0px); -webkit-filter: blur(0px)}
+  50%  {margin-top: -1lh; opacity: 0.15;filter: blur(2px); -webkit-filter: blur(2px);}
+  75%  {margin-top: -2lh; opacity: 0; filter: blur(0px); -webkit-filter: blur(0px)}
+  76%  {margin-top: 2lh; opacity: 0; filter: blur(0px); -webkit-filter: blur(0px)}
+  100% {margin-top: 1lh; opacity: .15;filter: blur(2px); -webkit-filter: blur(2px);}
+}
+
+.vizzaras-animation {
+  animation-name: vizzaras;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes vizzaras {
+  0%   {margin-top: 2lh; opacity: 0; filter: blur(0px); -webkit-filter: blur(0px)}
+  25%  {margin-top: 1lh; opacity: .15; filter: blur(2px); -webkit-filter: blur(2px);}
+  50%  {margin-top: 0lh; opacity: 1; filter: blur(0px); -webkit-filter: blur(0px)}
+  75%  {margin-top: -1lh; opacity: .15; filter: blur(2px); -webkit-filter: blur(2px);}
+  99%  {margin-top: -2lh; opacity: 0; filter: blur(0px); -webkit-filter: blur(0px)}
+  100% {margin-top: 2lh; opacity: 0; filter: blur(0px); -webkit-filter: blur(0px)}
+}
+
+.hangszigeteles-animation {
+  animation-name: hangszigeteles;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-delay: 1.25s;
+}
+
+@keyframes hangszigeteles {
+  0%   {margin-top: 2lh; opacity: 0; filter: blur(0px); -webkit-filter: blur(0px)}
+  25%  {margin-top: 1lh; opacity: .15; filter: blur(2px); -webkit-filter: blur(2px);}
+  50%  {margin-top: 0lh; opacity: 1; filter: blur(0px); -webkit-filter: blur(0px)}
+  75%  {margin-top: -1lh; opacity: .15; filter: blur(2px); -webkit-filter: blur(2px);}
+  99%  {margin-top: -2lh; opacity: 0; filter: blur(0px); -webkit-filter: blur(0px)}
+  100% {margin-top: 2lh; opacity: 0; filter: blur(0px); -webkit-filter: blur(0px)}
+}
+
+
+.ease-in-animation {
+  animation-name: ease-in-1s;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+}
+
+
+@keyframes ease-in-1s {
+  0% {opacity: 0; margin-bottom: 10px;}
+  100% {opacity: 1; margin-bottom: 0px;}
+  
+}
+
+
+/*Lines*/
+
+.line {
+  border-bottom: 1px solid rgb(163 163 163);
+  width: 100px;
+  transform: rotate(-45deg);
+  margin-top: -15px;
+}
+
+.line2 {
+  border-top: 1px solid rgb(163 163 163);
+  width: 100px;
+  transform: rotate(-45deg);
+  margin-bottom: -15px;
+}
+
+
+/*Tile animation*/
+
+.inner-tile {
+  transition: 0.2s ease-out;
+}
+
+.base-tile {
+  box-shadow: 0px 0px 0px 0 black;
+}
+
+.inner-tile h2 {
+  opacity: 0;
+  transition: .3s ease-in-out;
+  transition-delay: .2s;
+}
+
+.inner-tile p {
+  opacity: 0;
+  transition: .3s ease-in-out;
+  transition-delay: .3s;
+}
+
+.base-tile:hover .inner-tile {
+  top: 0%;
+}
+
+.base-tile:hover .inner-tile h2 {
+  opacity: 1;
+}
+
+.base-tile:hover .inner-tile p {
+  opacity: 1;
+}
+
+.base-tile:hover {
+  box-shadow: 10px 8px 0.12 black;
+}
+
+/*GYIK összecsukódás*/
+
+.collapsible, .collapsible1, .collapsible2, .collapsible3, .collapsible4, .collapsible5, .collapsible6, .collapsible7, .collapsible8, .collapsible9 {
+  overflow: hidden;
+}
+
+.collapsible input, .collapsible1 input, .collapsible2 input, .collapsible3 input, .collapsible4 input, .collapsible5 input, .collapsible6 input, .collapsible7 input, .collapsible8 input, .collapsible9 input {
+  display: none;
+}
+
+.collapsible label, .collapsible1 label, .collapsible2 label, .collapsible3 label, .collapsible4 label, .collapsible5 label, .collapsible6 label, .collapsible7 label, .collapsible8 label, .collapsible9 label {
+  position: relative;
+  display: block;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.collapsible label:after, .collapsible1 label:after, .collapsible2 label:after, .collapsible3 label:after, .collapsible4 label:after, .collapsible5 label:after, .collapsible6 label:after, .collapsible7 label:after, .collapsible8 label:after, .collapsible9 label:after {
+  content: "";
+  position: absolute;
+  transform: translateY(-100%);
+  right: 15px;
+  top: 20px;
+  width: 18px;
+  height: 18px;
+  /*background: url(public/budget.svg) no-repeat 0 0;*/
+  background: rgb(80, 80, 80);
+  transition: all 0.3s ease;
+}
+
+.collapsible input:checked + label::after, .collapsible1 input:checked + label::after, .collapsible2 input:checked + label::after, .collapsible3 input:checked + label::after, .collapsible4 input:checked + label::after, .collapsible5 input:checked + label::after, .collapsible6 input:checked + label::after, .collapsible7 input:checked + label::after, .collapsible8 input:checked + label::after, .collapsible9 input:checked + label::after {
+  transform: rotate(90deg);
+}
+
+.collapsible-text, .collapsible-text1, .collapsible-text2, .collapsible-text3, .collapsible-text4, .collapsible-text5, .collapsible-text6, .collapsible-text7, .collapsible-text8, .collapsible-text9 {
+  max-height: 1px;
+  overflow: hidden;
+  position: relative;
+  top: -100%;
+  opacity: 0.5;
+  transition: all 0.3s ease;
+}
+
+.collapsible input:checked ~ .collapsible-text, .collapsible1 input:checked ~ .collapsible-text1, .collapsible2 input:checked ~ .collapsible-text2, .collapsible3 input:checked ~ .collapsible-text3, .collapsible4 input:checked ~ .collapsible-text4, .collapsible5 input:checked ~ .collapsible-text5, .collapsible6 input:checked ~ .collapsible-text6, .collapsible7 input:checked ~ .collapsible-text7, .collapsible8 input:checked ~ .collapsible-text8, .collapsible9 input:checked ~ .collapsible-text9 {
+  padding-bottom: 25px;
+  opacity: 1;
+  top: 0;
+  max-height: 200px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+/* Slider */
+
+.foamwidthslider {
+  -webkit-appearance: none;
+  appearance: none;
+  background: #e5e5e5;
+  height: 20px;
+  border-radius: 30px;
+  outline: none;
+  -webkit-transition: 0.2s;
+  opacity: 0.5;
+  transition: opacity 0.2s;
+}
+
+.foamwidthslider:hover {
+  opacity: 1;
+}
+
+.foamwidthslider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width:30px;
+  height: 30px;
+  background: #06A452;
+  border: 1px solid #e5e5e5;
+  border-radius: 15px;
+  cursor:pointer;
 }
