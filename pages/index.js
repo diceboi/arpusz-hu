@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <>
     
-    <div className='flex flex-col items-center justify-center w-full h-screen bg-neutral-100'>
+    <div className='relative flex flex-col items-center justify-center w-full pt-[75px] h-screen bg-neutral-100'>
       <div className='flex flex-col justify-evenly w-1/3 h-1/2 place-self-center m-auto min-w-[650px] z-10'>
         <div className='flex flex-col'>
           <Image src='/arpusz-logo-header-01.png' width={1000} height={500} className='w-1/2 self-center -mb-8'></Image>
@@ -80,11 +80,11 @@ export default function Home() {
         </div> 
         <h3 className='p-4 m-4 text-center'>A Púrhab szigetelés az egyik leghatékonyabb módja módja annak, hogy javítsd otthonod kényelmét és csökkentsd az energiaszámlád. Próbáld ki most, és élvezd az azonnali kényelmet és megtakarítást!</h3>
         <div className='flex items-center justify-center gap-4'>
-          <button className='py-2 px-4 bg-gradient-to-r from-[#06A452] to-[#0DC666] text-white border-transparent rounded-md'>Árat kalkulálok</button>
+          <button className='py-2 px-4 bg-gradient-to-r from-[#06A452] to-[#0DC666] hover:shadow-[#06a4522f] hover:shadow-xl transition-all text-white border-transparent rounded-md'>Árat kalkulálok</button>
           <button className='py-2 px-4 border border-neutral-300  rounded-md'>Miért a púrhab?</button>
         </div>
       </div>
-      <div className='flex justify-between w-1/2 min-w-[650px] m-auto z-10'>
+      <div className='flex justify-between w-8/12 min-w-[650px] m-auto z-10'>
         <div className='flex flex-col justify-between items-center gap-4'><Image src='/nogaps.svg' width={60} height={60}></Image><p>Résmentes</p></div>
         <div className='flex flex-col justify-between items-center gap-4'><Image src='/insulation_1.svg' width={60} height={60}></Image><p>Kiválóan szigetel</p></div>
         <div className='flex flex-col justify-between items-center gap-4'><Image src='/fast.svg' width={60} height={60}></Image><p>Gyors</p></div>
@@ -316,7 +316,7 @@ export default function Home() {
 
         <div className='flex w-8/12 items-center'>
 
-          <div className='flex flex-col items-center w-[49%] py-12 '>
+          <div className='flex flex-col items-start w-[49%] py-12 '>
             
             <div className='flex w-8/12 h-96 bg-white shadow-xl rounded-xl z-[4] ease-in-animation'>
               
@@ -326,7 +326,7 @@ export default function Home() {
 
           <div className='relative w-[14px] -mr-[11px] h-[500px] border-r-2 border-dashed'><p className='absolute flex justify-center items-center w-12 h-12 rounded-full -left-3 bg-green-500 text-white font-black top-2/4 -translate-y-1/2'>1.</p></div>
 
-          <div className='flex flex-col  items-center w-[49%] text-center gap-8'>
+          <div className='flex flex-col  items-end w-[49%] text-center gap-8'>
             <div className='flex flex-col gap-8 w-8/12'>
             <p>Add meg a kalkulátrban  a szigetelni kívánt felületek számát, méretét, a szigetelés vastagságát, és a telepítés irányítószámát, mi pedig 1 percen belül küldünk egy indikatív árajánlatot az email címedre.
             </p>
@@ -338,7 +338,7 @@ export default function Home() {
 
         <div className='flex w-8/12 items-center'>   
 
-          <div className='flex flex-col  items-center w-[49%] text-center gap-8'>
+          <div className='flex flex-col  items-start w-[49%] text-center gap-8'>
             <div className='flex flex-col gap-8 w-8/12'>
             <p>Az email-ben kapott árajánlat mellé kapsz egy linket amire kattintva (amennyiben elégedett vagy az ajánlattal) visszahívást kérhetsz. Ha így döntesz, és miért ne döntenél így ;) lehetőség szerint még aznap visszahívünk.
             </p>
@@ -348,7 +348,7 @@ export default function Home() {
 
           <div className='relative w-[14px] -mr-[11px] h-[500px] border-r-2 border-dashed'><p className='absolute flex justify-center items-center w-12 h-12 rounded-full -left-3 bg-green-500 text-white font-black top-2/4 -translate-y-1/2'>2.</p></div>
 
-          <div className='flex flex-col items-center w-[49%] py-12 '>
+          <div className='flex flex-col items-end w-[49%] py-12 '>
             
             <div className='flex w-8/12 h-96 bg-white shadow-xl rounded-xl z-[4] ease-in-animation'>
               
@@ -360,7 +360,7 @@ export default function Home() {
 
         <div className='flex w-8/12 items-center'>
 
-          <div className='flex flex-col items-center w-[49%] py-12 '>
+          <div className='flex flex-col items-start w-[49%] py-12 '>
             
             <div className='flex w-8/12 h-96 bg-white shadow-xl rounded-xl z-[4] ease-in-animation'>
               
@@ -370,7 +370,7 @@ export default function Home() {
 
           <div className='relative w-[14px] -mr-[11px] h-[500px] border-r-2 border-dashed'><p className='absolute flex justify-center items-center w-12 h-12 rounded-full -left-3 bg-green-500 text-white font-black top-2/4 -translate-y-1/2'>3.</p></div>
 
-          <div className='flex flex-col  items-center w-[49%] text-center gap-8'>
+          <div className='flex flex-col  items-end w-[49%] text-center gap-8'>
             <div className='flex flex-col gap-8 w-8/12'>
             <p>A telefonos vagy email-es egyeztetés után lefixáljuk az árat, és amennyiben szükséges, megbeszélünk egy helyszíni felmérést. Az ilyen felmérés általában csak nagyobb projecteknél szükséges, családi házak illetve azokhoz kapcsolódó melléképületek szigetelésénél általában nincs szükség rá.
             </p>
@@ -382,7 +382,7 @@ export default function Home() {
 
         <div className='flex w-8/12 items-center'>   
 
-          <div className='flex flex-col  items-center w-[49%] text-center gap-8'>
+          <div className='flex flex-col  items-start w-[49%] text-center gap-8'>
             <div className='flex flex-col gap-8 w-8/12'>
             <p>A megbeszélt időpontban kimegyünk és elvégezzük a feladatot. Sőt még egy kis ajándékkal is meglepünk amiért minket választottál!
             </p>
@@ -392,7 +392,7 @@ export default function Home() {
 
           <div className='relative w-[14px] -mr-[11px] h-[500px] border-r-2 border-dashed'><p className='absolute flex justify-center items-center w-12 h-12 rounded-full -left-3 bg-green-500 text-white font-black top-2/4 -translate-y-1/2'>4.</p></div>
 
-          <div className='flex flex-col items-center w-[49%] py-12 '>
+          <div className='flex flex-col items-end w-[49%] py-12 '>
             
             <div className='flex w-8/12 h-96 bg-white shadow-xl rounded-xl z-[4] ease-in-animation'>
               
@@ -404,7 +404,7 @@ export default function Home() {
 
         <div className='flex w-8/12 items-center'>
 
-          <div className='flex flex-col items-center w-[49%] py-12 '>
+          <div className='flex flex-col items-start w-[49%] py-12 '>
             
             <div className='flex w-8/12 h-96 bg-white shadow-xl rounded-xl z-[4] ease-in-animation'>
               
@@ -414,7 +414,7 @@ export default function Home() {
 
           <div className='relative w-[14px] -mr-[11px] h-[500px] border-r-2 border-dashed'><p className='absolute flex justify-center items-center w-12 h-12 rounded-full -left-3 bg-white border-2 border-dashed text-green-500 font-black top-2/4 -translate-y-1/2'>+1</p></div>
 
-          <div className='flex flex-col  items-center w-[49%] text-center gap-8'>
+          <div className='flex flex-col  items-end w-[49%] text-center gap-8'>
             <div className='flex flex-col gap-8 w-8/12'>
             <p>+1 lépésként értékelheted a munkánkat, ami segít minket a fejlődésben.
             </p>
