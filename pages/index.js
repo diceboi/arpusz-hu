@@ -44,7 +44,7 @@ export default function Home() {
           <div className='relative h-32 w-full border-t border-b border-neutral-400 text-7xl font-black tracking-tighter p-6 overflow-hidden'>
             <h1 className='legzaras-animation absolute'>Légzárás</h1>
             <h1 className='hoszigeteles-animation absolute'>Hőszigetelés</h1>
-            <h1 className='vizzaras-animation absolute'>Vízzárás</h1>
+            <h1 className='vizzaras-animation absolute'>Vízszigetelés</h1>
             <h1 className='hangszigeteles-animation absolute opacity-0'>Hangszigetelés</h1>
           </div>
           <div className='flex justify-between h-10 overflow-hidden'>
