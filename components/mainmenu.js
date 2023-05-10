@@ -31,7 +31,7 @@ export default function MainMenu() {
                 <li className=" uppercase font-bold text-[#06A452] border border-[#06A452] rounded-md p-1 bg-white hover:bg-[#06A452] hover:text-white cursor-pointer transition-all "><Link href="/">Arpusz.hu</Link></li>
                 <li className="relative group">
                     <Link href="/rolunk">Rólunk</Link>
-                    <span className="absolute inset-x-0 bottom-0 h-[1px] bg-black transition-all duration-200 transform origin-left scale-x-0 group-hover:scale-x-100"></span>
+                    <span className="absolute inset-x-0 bottom-0 h-[1px] bg-black transition-all duration-200 transform origin-left scale-x-0 group-hover:scale-x-100 group-focus:scale-x-100"></span>
                 </li>
                 <li className="relative group">
                     <Link href="/szolgaltatasok">Szolgáltatások</Link>
