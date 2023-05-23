@@ -6,7 +6,7 @@ import { BiChevronDown } from 'react-icons/bi'
 export default function Szolgaltatasok() {
     return (
     <>
-    <section className='flex flex-col justify-center items-center w-screen bg-neutral-100 shadow-inner shadow-neutral-200 pb-12 pt-[75px]'>
+    <section className='flex flex-col justify-center items-center w-full overflow-hidden bg-neutral-100 shadow-inner shadow-neutral-200 pb-12 pt-[75px]'>
     <div className='flex flex-col w-8/12 py-8'>
         <h1 className='text-center m-auto text-6xl font-black tracking-tighter py-2'>Szolgáltatások</h1>
         <p  className='text-center text-xl w-1/2 m-auto py-2'>Vállalkozásunk szórt púrhab szigeteléssel foglalkozik</p>

@@ -28,7 +28,7 @@ export default function MainMenu() {
 
         <nav id="main-menu" style={{ height: "75px", backgroundColor: "#ffffff00" }} className=" flex justify-center fixed w-full top-0 z-50 backdrop-blur-md border-b border-neutral-200 transition-all">
             <ul className="flex items-center justify-between gap-4 w-8/12">
-                <li className=" uppercase font-bold text-[#06A452] border border-[#06A452] rounded-md p-1 bg-white hover:bg-[#06A452] hover:text-white cursor-pointer transition-all "><Link href="/">Arpusz.hu</Link></li>
+                <Link href="/"><li className=" uppercase font-bold text-[#06A452] border border-[#06A452] rounded-md p-1 bg-white hover:bg-[#06A452] hover:text-white cursor-pointer transition-all ">Arpusz.hu</li></Link>
                 <li className="relative group">
                     <Link href="/rolunk">Rólunk</Link>
                     <span className="absolute inset-x-0 bottom-0 h-[1px] bg-black transition-all duration-200 transform origin-left scale-x-0 group-hover:scale-x-100 group-focus:scale-x-100"></span>
@@ -42,7 +42,7 @@ export default function MainMenu() {
                     <span className="absolute inset-x-0 bottom-0 h-[1px] bg-black transition-all duration-200 transform origin-left scale-x-0 group-hover:scale-x-100"></span>
                 </li>
                 <li className="relative group">
-                    <Link href="/purhabrol">Miért a púrhab?</Link>
+                    <Link href="/purhabrol-bovebben">Miért a púrhab?</Link>
                     <span className="absolute inset-x-0 bottom-0 h-[1px] bg-black transition-all duration-200 transform origin-left scale-x-0 group-hover:scale-x-100"></span>
                 </li>
                 <li className="relative group">

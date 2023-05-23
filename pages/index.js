@@ -4,12 +4,14 @@ import { AiFillStar } from 'react-icons/ai'
 import { BiChevronDown } from 'react-icons/bi'
 import { FaRegEnvelope } from 'react-icons/fa'
 import Link from 'next/link'
+import MainCTA from '@/components/maincta'
+import SecondaryCTA from '@/components/secondarycta'
 
 export default function Home() {
   return (
     <>
     
-    <div className='relative flex flex-col items-center justify-center w-full pt-[75px] h-screen bg-neutral-100'>
+    <div className='relative flex flex-col items-center justify-center w-full overflow-hidden m-auto pt-[75px] h-screen  bg-neutral-100'>
       <div className='flex flex-col justify-evenly w-1/3 h-1/2 place-self-center m-auto min-w-[650px] z-10'>
         <div className='flex flex-col'>
           <Image src='/arpusz-logo-header-01.png' width={1000} height={500} className='w-1/2 self-center -mb-8'></Image>
@@ -82,8 +84,8 @@ export default function Home() {
         </div> 
         <h3 className='p-4 m-4 text-center'>A Púrhab szigetelés az egyik leghatékonyabb módja módja annak, hogy javítsd otthonod kényelmét és csökkentsd az energiaszámlád. Próbáld ki most, és élvezd az azonnali kényelmet és megtakarítást!</h3>
         <div className='flex items-center justify-center gap-4'>
-          <button className='py-2 px-4 bg-gradient-to-r from-[#06A452] to-[#0DC666] hover:shadow-[#06a4522f] hover:shadow-xl transition-all text-white border-transparent rounded-md'>Árat kalkulálok</button>
-          <button className='py-2 px-4 border border-neutral-300  rounded-md'>Miért a púrhab?</button>
+          <Link href="/kalkulator"><MainCTA>Árat kalkulálok</MainCTA></Link>
+          <Link href="/purhabrol-bovebben"><SecondaryCTA>Miért a púrhab?</SecondaryCTA></Link>
         </div>
       </div>
       <div className='flex justify-between w-8/12 min-w-[650px] m-auto z-10'>
@@ -102,7 +104,7 @@ export default function Home() {
 
 
 
-    <section className='flex flex-col justify-center items-center w-screen h-screen bg-white py-12'>
+    <section className='flex flex-col justify-center items-center w-full overflow-hidden h-screen bg-white py-12'>
       <div className='flex flex-col w-8/12 py-8'>
       <h1 className='text-center m-auto text-8xl font-black text-white px-4 tracking-tighter bg-gradient-to-r from-[#06A452] to-[#0DC666] py-2'>Púrhab</h1>
         <h1 className='text-center m-auto text-6xl font-black tracking-tighter py-2'>A legjobb szigetelő</h1>
@@ -175,17 +177,17 @@ export default function Home() {
         <div className='flex flex-col w-1/3 text-center gap-8'>
           <p>U-érték, Watt per négyzetméterkelvin, porózusság... Ezek mind olyan fogalmak amikről egy laikusnak nem sok minden jut az eszébe, viszont szigetelés szempontjából nagyon fontosak. Hogy ne kelljen tovább keress, összeszedtük neked minden információt, ami megmutatja, hogy miért kiemelkedő a szórt púrhab a többi szigetelőanyaghoz képest.
           </p>
-          <button className=' self-center py-2 px-4 border border-neutral-300 rounded-md'>A púrhabról bővebben</button>
+          <Link href="/purhabrol-bovebben"><SecondaryCTA>A púrhabról bővebben</SecondaryCTA></Link>
         </div>
       </div>
-      <button className='py-2 px-4 bg-gradient-to-r from-[#06A452] to-[#0DC666] text-white border-transparent rounded-md'>A legjobb szigetelést szeretném</button>
+      <Link href="/kalkulator"><MainCTA>A legjobb szigetelés szeterném</MainCTA></Link>
     </section>
 
 
-    <section className='flex flex-col justify-center items-center w-screen bg-neutral-100 shadow-inner shadow-neutral-200 py-12'>
+    <section className='flex flex-col justify-center items-center w-full overflow-hidden bg-neutral-100 shadow-inner shadow-neutral-200 py-12'>
       
 
-      <div className=' grid grid-cols-4 gap-4 grid-rows-4 w-8/12 items-center py-8 '>
+      <div className=' grid grid-cols-4 gap-4 grid-rows-4 w-8/12 m-auto items-center py-8 '>
 
           <div style={{backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/csaladi-haz.jpg")`}} className='base-tile relative overflow-hidden col-span-2 flex items-center justify-center rounded-xl min-h-[250px] bg-cover hover:shadow-xl'>
             <div className='p-4'><Image className='' src='/csaladi-haz-white-icon.svg' height={60} width={60}></Image></div>
@@ -296,20 +298,22 @@ export default function Home() {
             
           </div>
 
-          <div className='flex items-start flex-col p-4 bg-gradient-to-r from-[#06A452] to-[#8AECB9] base-tile relative overflow-hidden col-span-2 rounded-xl h-full min-h-[250px] hover:shadow-xl'>
+          <Link className='col-span-2' href="/kalkulator">
+          <div className='flex items-start flex-col p-4 bg-gradient-to-r from-[#06A452] to-[#8AECB9] base-tile relative overflow-hidden  rounded-xl h-full min-h-[250px] hover:shadow-xl'>
             <Image className='absolute right-5 bottom-0' src='/hand.png' height={200} width={200}></Image>
             <h2 className='text-4xl text-white font-normal z-[1]'>Számold ki</h2>
             <h1 className='text-5xl text-white font-black z-[1]'>3 lépésben</h1>
             <p className='text-lg text-white font-normal z-[1] w-1/2'>a te igényeidnek megfelelő púrhab szigetelést kalkulátorunkkal!</p>
             
           </div>
+          </Link>
 
 
       </div>
 
     </section>
 
-    <section className='relative flex flex-col justify-center items-center w-screen bg-white '>
+    <section className='relative flex flex-col justify-center items-center w-full overflow-hidden bg-white '>
 
       <div className='flex flex-col w-8/12 py-8'>
           <h1 className='text-center m-auto text-6xl font-black tracking-tighter py-2'>Hogyan lesz Púrhab szigetelésed?</h1>
@@ -402,7 +406,7 @@ export default function Home() {
             <h1 className='font-black text-3xl'>Árkalkulátor</h1>
             <p>Add meg a kalkulátrban  a szigetelni kívánt felületek számát, méretét, a szigetelés vastagságát, és a telepítés irányítószámát, mi pedig 1 percen belül küldünk egy indikatív árajánlatot az email címedre.
             </p>
-            <button className=' self-center py-2 px-4 bg-[#06a452] text-white rounded-md'><Link href='/kalkulator'>Árat kalkulálok</Link></button>
+            <Link href="/kalkulator"><MainCTA>Árat kalkulálok</MainCTA></Link>
             </div>          
           </div>
 
@@ -560,12 +564,12 @@ export default function Home() {
         </div>
 
 
-      <button className='py-4 px-8 bg-gradient-to-r from-[#06A452] to-[#0DC666] text-white border-transparent rounded-md text-xl'>Ugrás az első lépéshez</button>
+        <Link href="/kalkulator"><MainCTA>Ugrás az első lépéshez</MainCTA></Link>
     
     </section>  
 
 
-    <section className='flex flex-col justify-center items-center w-screen bg-white py-12'>
+    <section className='flex flex-col justify-center items-center w-full overflow-hidden bg-white py-12'>
       <div className='flex flex-col w-8/12 py-8'>
         <h1 className='text-center m-auto text-6xl font-black tracking-tighter py-2'>Referenciák</h1>
         <p  className='text-center text-xl w-1/2 m-auto py-2'>Akik már minket választottak</p>
@@ -662,11 +666,11 @@ export default function Home() {
       </div>
       </div>
 
-      <button className='py-2 px-4 bg-gradient-to-r from-[#06A452] to-[#0DC666] text-white border-transparent rounded-md text-xl'>Tovább a kalkulátorhoz</button>
+      <Link href="/kalkulator"><MainCTA>Tovább a kalkulátorhoz</MainCTA></Link>
     </section>
 
 
-    <section className='flex flex-col justify-center items-center w-screen bg-white py-12'>
+    <section className='flex flex-col justify-center items-center w-full overflow-hidden bg-white py-12'>
       <div className='flex flex-col w-8/12 py-8'>
         <h1 className='text-center m-auto text-6xl font-black tracking-tighter py-2'>GYIK</h1>
         <p  className='text-center text-xl w-1/2 m-auto py-2'>Gyakran ismételt kérdések</p>
@@ -677,7 +681,7 @@ export default function Home() {
 
         <div className='collapsible flex flex-col items-stretch justify-center align-middle w-full border-t border-b py-4'>
           <input type='checkbox' id='collapsible-head'></input>
-          <label for="collapsible-head" className='uppercase tracking-widest text-xl font-bold'>Mi az a púrhab szigetelés?</label>
+          <label for="collapsible-head" className='    text-xl font-bold'>Mi az a púrhab szigetelés?</label>
           <div className='collapsible-text'>
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
           </div>
@@ -685,7 +689,7 @@ export default function Home() {
 
         <div className='collapsible1 flex flex-col items-stretch justify-center align-middle w-full border-t border-b py-4'>
           <input type='checkbox' id='collapsible-head1'></input>
-          <label for="collapsible-head1" className='uppercase tracking-widest text-xl font-bold'>Milyen területeken használható a púrhab szigetelés?</label>
+          <label for="collapsible-head1" className='   text-xl font-bold'>Milyen területeken használható a púrhab szigetelés?</label>
           <div className='collapsible-text1'>
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
           </div>
@@ -693,7 +697,7 @@ export default function Home() {
 
         <div className='collapsible2 flex flex-col items-stretch justify-center align-middle w-full border-t border-b py-4'>
           <input type='checkbox' id='collapsible-head2'></input>
-          <label for="collapsible-head2" className='uppercase tracking-widest text-xl font-bold'>Miért előnyös a púrhab szigetelés más szigetelőanyagokhoz képest?</label>
+          <label for="collapsible-head2" className='   text-xl font-bold'>Miért előnyös a púrhab szigetelés más szigetelőanyagokhoz képest?</label>
           <div className='collapsible-text2'>
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
           </div>
@@ -701,7 +705,7 @@ export default function Home() {
 
         <div className='collapsible3 flex flex-col items-stretch justify-center align-middle w-full border-t border-b py-4'>
           <input type='checkbox' id='collapsible-head3'></input>
-          <label for="collapsible-head3" className='uppercase tracking-widest text-xl font-bold'>Mennyire tartós a púrhab szigetelés?</label>
+          <label for="collapsible-head3" className='   text-xl font-bold'>Mennyire tartós a púrhab szigetelés?</label>
           <div className='collapsible-text3'>
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
           </div>
@@ -709,7 +713,7 @@ export default function Home() {
 
         <div className='collapsible4 flex flex-col items-stretch justify-center align-middle w-full border-t border-b py-4'>
           <input type='checkbox' id='collapsible-head4'></input>
-          <label for="collapsible-head4" className='uppercase tracking-widest text-xl font-bold'>Hogyan történik a púrhab szigetelés folyamata?</label>
+          <label for="collapsible-head4" className='   text-xl font-bold'>Hogyan történik a púrhab szigetelés folyamata?</label>
           <div className='collapsible-text4'>
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
           </div>
@@ -717,7 +721,7 @@ export default function Home() {
 
         <div className='collapsible5 flex flex-col items-stretch justify-center align-middle w-full border-t border-b py-4'>
           <input type='checkbox' id='collapsible-head5'></input>
-          <label for="collapsible-head5" className='uppercase tracking-widest text-xl font-bold'>Mennyi idő alatt készül el a púrhab szigetelés?</label>
+          <label for="collapsible-head5" className='   text-xl font-bold'>Mennyi idő alatt készül el a púrhab szigetelés?</label>
           <div className='collapsible-text5'>
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
           </div>
@@ -725,7 +729,7 @@ export default function Home() {
 
         <div className='collapsible6 flex flex-col items-stretch justify-center align-middle w-full border-t border-b py-4'>
           <input type='checkbox' id='collapsible-head6'></input>
-          <label for="collapsible-head6" className='uppercase tracking-widest text-xl font-bold'>Milyen előkészületekre van szükség a púrhab szigetelés előtt?</label>
+          <label for="collapsible-head6" className='   text-xl font-bold'>Milyen előkészületekre van szükség a púrhab szigetelés előtt?</label>
           <div className='collapsible-text6'>
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
           </div>
@@ -733,7 +737,7 @@ export default function Home() {
 
         <div className='collapsible7 flex flex-col items-stretch justify-center align-middle w-full border-t border-b py-4'>
           <input type='checkbox' id='collapsible-head7'></input>
-          <label for="collapsible-head7" className='uppercase tracking-widest text-xl font-bold'>Milyen típusú púrhabok vannak?</label>
+          <label for="collapsible-head7" className='   text-xl font-bold'>Milyen típusú púrhabok vannak?</label>
           <div className='collapsible-text7'>
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
           </div>
@@ -741,7 +745,7 @@ export default function Home() {
 
         <div className='collapsible8 flex flex-col items-stretch justify-center align-middle w-full border-t border-b py-4'>
           <input type='checkbox' id='collapsible-head8'></input>
-          <label for="collapsible-head8" className='uppercase tracking-widest text-xl font-bold'>Milyen árban mozog a púrhab szigetelés?</label>
+          <label for="collapsible-head8" className='   text-xl font-bold'>Milyen árban mozog a púrhab szigetelés?</label>
           <div className='collapsible-text8'>
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
           </div>
@@ -749,7 +753,7 @@ export default function Home() {
 
         <div className='collapsible9 flex flex-col items-stretch justify-center align-middle w-full border-t border-b py-4'>
           <input type='checkbox' id='collapsible-head9'></input>
-          <label for="collapsible-head9" className='uppercase tracking-widest text-xl font-bold'>Milyen garanciát vállalnak a púrhab szigetelésre?</label>
+          <label for="collapsible-head9" className='   text-xl font-bold'>Milyen garanciát vállalnak a púrhab szigetelésre?</label>
           <div className='collapsible-text9'>
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
           </div>
@@ -759,12 +763,12 @@ export default function Home() {
 
       </div>
 
-      <button className='py-2 px-4 bg-gradient-to-r from-[#06A452] to-[#0DC666] text-white border-transparent rounded-md text-xl'>Nincs több kérdésem</button>
+      <Link href="/kalkulator"><MainCTA>Nincs több kérdésem</MainCTA></Link>
     </section>
 
 
 
-    <section className='flex flex-col justify-center items-center w-screen bg-white py-12'>
+    <section className='flex flex-col justify-center items-center w-full overflow-hidden bg-white py-12'>
       <div className='flex flex-col w-8/12 py-8'>
         <h1 className='text-center m-auto text-6xl font-black tracking-tighter py-2'>Blog</h1>
         <p  className='text-center text-xl w-1/2 m-auto py-2'>Érdekességek a szigetelés világából</p>
@@ -787,18 +791,20 @@ export default function Home() {
         </div>
 
       </div>
-      <button className='py-2 px-4 border border-neutral-200 rounded-md'>További olvasmányok</button>
+          <Link href="/blog"><SecondaryCTA>További olvasmányok</SecondaryCTA></Link>
     </section>
 
-    <section>
+    <section className='w-full overflow-hidden'>
 
-    <div className='flex w-8/12 m-auto items-start flex-col p-4 bg-gradient-to-r from-[#06A452] to-[#8AECB9] base-tile relative overflow-hidden col-span-2 rounded-xl h-full min-h-[250px] hover:shadow-xl'>
+    <Link href="/kalkulator">
+    <div className='flex w-8/12 m-auto items-start flex-col p-4 my-8 bg-gradient-to-r from-[#06A452] to-[#8AECB9] base-tile relative overflow-hidden col-span-2 rounded-xl h-full min-h-[250px] hover:shadow-xl'>
             <Image className='absolute right-5 bottom-0' src='/hand.png' height={200} width={200}></Image>
             <h2 className='text-4xl text-white font-normal z-[1]'>Számold ki</h2>
             <h1 className='text-5xl text-white font-black z-[1]'>3 lépésben</h1>
             <p className='text-lg text-white font-normal z-[1] w-1/2'>a te igényeidnek megfelelő púrhab szigetelést kalkulátorunkkal!</p>
             
     </div>
+    </Link>
 
     </section>
     </>
