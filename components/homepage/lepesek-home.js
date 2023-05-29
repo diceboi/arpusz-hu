@@ -23,7 +23,7 @@ export default function Lepesek() {
 
 
                         
-                        <div className='absolute top-0 -translate-y-1/2  flex w-11/12 lg:w-8/12 h-60 bg-white shadow-xl border border-neutral-200 rounded-xl z-[4]'>
+                        <div className='absolute top-0 -left-3 lg:-left-0 -translate-y-1/2  flex w-11/12 lg:w-8/12 h-60 bg-white shadow-xl border border-neutral-200 rounded-xl z-[3]'>
 
                             <div className='relative flex flex-col items-center justify-between h-full w-full p-10 '>
 
@@ -66,7 +66,7 @@ export default function Lepesek() {
                         </div>
 
 
-                        <div className='absolute -translate-y-1/2 top-[20em] lg:top-[10em] lg:left-[10em] flex w-11/12 lg:w-8/12 h-60 bg-white shadow-xl border border-neutral-200 rounded-xl z-[4] ease-in-animation'>
+                        <div className='absolute -translate-y-1/2 top-[20em] lg:top-[10em] lg:left-[10em] -right-3 lg:-right-0 flex w-11/12 lg:w-8/12 h-60 bg-white shadow-xl border border-neutral-200 rounded-xl z-[5] ease-in-animation'>
 
                         <div className='flex flex-col items-center justify-around h-full w-full py-4'>
 
@@ -97,7 +97,7 @@ export default function Lepesek() {
                         <div className='relative w-[14px] -ml-[12px] lg:-mr-[11px] h-[150px] lg:h-[500px] border-r-2 border-dashed'><p className='absolute flex justify-center items-center w-12 h-12 rounded-full -left-3 bg-green-500 text-white font-black top-2/4 -translate-y-1/2'>1.</p></div>
 
                         <div className='flex flex-col items-center lg:items-end w-11/12 lg:w-[49%] text-center gap-8 m-auto'>
-                        <div className='flex flex-col gap-8 w-11/12 lg:w-8/12'>
+                        <div className='flex flex-col gap-8 w-full lg:w-8/12'>
                         <h1 className='font-black text-3xl'>Árkalkulátor</h1>
                         <p>Add meg a kalkulátrban  a szigetelni kívánt felületek számát, méretét, a szigetelés vastagságát, és a telepítés irányítószámát, mi pedig 1 percen belül küldünk egy indikatív árajánlatot az email címedre.
                         </p>
@@ -110,7 +110,7 @@ export default function Lepesek() {
                 <div className='flex flex-col lg:flex-row w-11/12 lg:w-8/12 items-center'>   
 
                     <div className='flex flex-col items-center lg:items-start w-11/12 lg:w-[49%] text-center gap-8'>
-                    <div className='flex flex-col gap-8 w-11/12 lg:w-8/12'>
+                    <div className='flex flex-col gap-8 w-full lg:w-8/12'>
                     <h1 className='font-black text-3xl'>Kapcsolatfelvétel</h1>
                     <p>Az email-ben kapott árajánlat mellé kapsz egy linket amire kattintva (amennyiben elégedett vagy az ajánlattal) visszahívást kérhetsz. Ha így döntesz, és miért ne döntenél így ;) lehetőség szerint még aznap visszahívünk.
                     </p>
@@ -187,7 +187,7 @@ export default function Lepesek() {
 
                 </div>
 
-                <div className='flex flex-col-reverse lg:flex-row w-8/12 items-center'>
+                <div className='flex flex-col-reverse lg:flex-row w-11/12 lg:w-8/12 items-center'>
 
                     <div className='flex flex-col items-center lg:items-start w-11/12 lg:w-[49%] pb-24 lg:py-12 '>
                     
@@ -200,7 +200,7 @@ export default function Lepesek() {
                     <div className='relative w-[14px] -ml-[12px] h-[150px] lg:h-[500px] border-r-2 border-dashed my-4 lg:my-0'><p className='absolute flex justify-center items-center w-12 h-12 rounded-full -left-3 bg-green-500 text-white font-black top-2/4 -translate-y-1/2'>3.</p></div>
 
                     <div className='flex flex-col items-center lg:items-end w-11/12 lg:w-[49%] text-center gap-8'>
-                    <div className='flex flex-col gap-8 w-11/12 lg:w-8/12'>
+                    <div className='flex flex-col gap-8 w-full lg:w-8/12'>
                     <h1 className='font-black text-3xl'>Egyeztetés</h1>
                     <p>A telefonos vagy email-es egyeztetés után lefixáljuk az árat, és amennyiben szükséges, megbeszélünk egy helyszíni felmérést. Az ilyen felmérés általában csak nagyobb projecteknél szükséges, családi házak illetve azokhoz kapcsolódó melléképületek szigetelésénél általában nincs szükség rá.
                     </p>
@@ -212,7 +212,7 @@ export default function Lepesek() {
                 <div className='flex flex-col lg:flex-row w-11/12 lg:w-8/12 items-center'>   
 
                     <div className='flex flex-col items-center lg:items-start w-11/12 lg:w-[49%] text-center gap-8'>
-                    <div className='flex flex-col gap-8 w-11/12 lg:w-8/12'>
+                    <div className='flex flex-col gap-8 w-full lg:w-8/12'>
                     <h1 className='font-black text-3xl'>Szigetelés</h1>
                     <p>A megbeszélt időpontban kimegyünk és elvégezzük a feladatot. Sőt még egy kis ajándékkal is meglepünk amiért minket választottál!
                     </p>
@@ -249,7 +249,7 @@ export default function Lepesek() {
                     <div className='relative w-[14px] -ml-[12px] lg:-mr-[11px] h-[150px] lg:h-[500px] border-r-2 border-dashed my-4 lg:my-0'><p className='absolute flex justify-center items-center w-12 h-12 rounded-full -left-3 bg-white border-2 border-dashed text-green-500 font-black top-2/4 -translate-y-1/2'>+1</p></div>
 
                     <div className='flex flex-col items-center lg:items-end w-11/12 lg:w-[49%] text-center gap-8'>
-                    <div className='flex flex-col gap-8 w-11/12 lg:w-8/12'>
+                    <div className='flex flex-col gap-8 w-full lg:w-8/12'>
                     <h1 className='font-black text-3xl'>Értékelés</h1>
                     <p>+1 lépésként értékelheted a munkánkat, ami segít minket a fejlődésben.
                     </p>
