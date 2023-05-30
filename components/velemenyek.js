@@ -56,7 +56,7 @@ export default function Velemenyek() {
       if (!isDragging) return;
       e.preventDefault();
       const x = e.pageX - sliderRef.current.offsetLeft;
-      const walk = (x - startX) * 3; // adjust scrolling speed
+      const walk = (x - startX) * 1; // adjust scrolling speed
       sliderRef.current.scrollLeft = scrollLeft - walk;
     };
   
@@ -67,10 +67,10 @@ export default function Velemenyek() {
     
     return(
         <>
-        <div className="relative flex flex-col items-center w-full lg:w-11/12 mx-auto my-4 p-4">
+        <div className="relative flex flex-col items-center w-full lg:w-10/12 mx-auto my-4 p-4">
           {isLeftButtonVisible && (
             <button
-              className="absolute z-10 left-8 lg:-left-1 top-48"
+              className="absolute z-10 top-48"
               onClick={handleLeftButtonClick}
             >
               <BiLeftArrowAlt className="h-10 w-10 rounded-full bg-green-500 text-white" />
@@ -89,15 +89,15 @@ export default function Velemenyek() {
           </h1>
           <div
             id="newproducts-outter-container"
-            className="w-full overflow-hidden right-full mt-4 h-[400px] overflow-x-scroll overflow-y-hidden touch-scroll scrollbar-thin scrollbar-thumb-gray-900 scrollbar-thumb-rounded-full scrollbar-track-white"
+            className="w-full overflow-hidden right-full mt-4 h-auto touch-scroll scrollbar-thin scrollbar-thumb-gray-900 scrollbar-thumb-rounded-full scrollbar-track-white"
             onScroll={handleScroll}
             ref={sliderRef}
             onMouseDown={handleMouseDown}
             onMouseMove={handleMouseMove}
             onMouseUp={handleMouseUp}
           >
-            <div id="newproducts-container" className="grid grid-cols-4 m-auto gap-4 w-[1064px]">
-            <div className='flex flex-col justify-center items-center gap-4 p-4 border rounded-xl w-[250px]'>
+            <div id="newproducts-container" className="flex m-auto gap-4 lg:w-10/12 flex-nowrap overflow-x-scroll">
+            <div className='flex flex-col justify-between items-center gap-4 p-4 border rounded-xl min-w-[250px]'>
                 <div className='flex'>
                     <AiFillStar />
                     <AiFillStar />
@@ -106,15 +106,15 @@ export default function Velemenyek() {
                     <AiFillStar />
                 </div>
                 <div>
-                    <p>Nagyon elégedett vagyok a púrhab szigeteléssel! Azonnal észrevettem a különbséget a hőmérsékletben, és a fűtésszámlám is jelentősen csökkent. Köszönöm a szakszerű és gyors munkát!</p>
+                    <p>Tetőt szigeteltünk, ez tűnt a legjobb és leggyorsabb megoldásnak. Jó áron volt ahhoz képest, hogy 2 óra alatt kész volt.</p>
                 </div>
-                <div className='flex flex-col gap-2'>
-                    <p className='font-bold'>József</p>
-                    <p>Somogyudvarhely</p>
+                <div className='flex flex-col gap-2 w-full'>
+                    <p className='font-bold'>Kálmán</p>
+                    <p>Veszprém</p>
                 </div>
                 </div>
 
-                <div className='flex flex-col justify-center items-center gap-4 p-4 border rounded-xl w-[250px]'>
+                <div className='flex flex-col justify-between items-center gap-4 p-4 border rounded-xl min-w-[250px]'>
                 <div className='flex'>
                     <AiFillStar />
                     <AiFillStar />
@@ -123,15 +123,15 @@ export default function Velemenyek() {
                     <AiFillStar />
                 </div>
                 <div>
-                    <p>Nagyon elégedett vagyok a púrhab szigeteléssel! Azonnal észrevettem a különbséget a hőmérsékletben, és a fűtésszámlám is jelentősen csökkent. Köszönöm a szakszerű és gyors munkát!</p>
+                    <p>Ne tévesszen meg senkit az ára, MEGÉRI!</p>
                 </div>
-                <div className='flex flex-col gap-2'>
-                    <p className='font-bold'>József</p>
-                    <p>Somogyudvarhely</p>
+                <div className='flex flex-col gap-2 w-full'>
+                    <p className='font-bold'>Zoltán</p>
+                    <p>Debrecen</p>
                 </div>
                 </div>
 
-                <div className='flex flex-col justify-center items-center gap-4 p-4 border rounded-xl w-[250px]'>
+                <div className='flex flex-col justify-between items-center gap-4 p-4 border rounded-xl min-w-[250px]'>
                 <div className='flex'>
                     <AiFillStar />
                     <AiFillStar />
@@ -140,15 +140,31 @@ export default function Velemenyek() {
                     <AiFillStar />
                 </div>
                 <div>
-                    <p>Nagyon elégedett vagyok a púrhab szigeteléssel! Azonnal észrevettem a különbséget a hőmérsékletben, és a fűtésszámlám is jelentősen csökkent. Köszönöm a szakszerű és gyors munkát!</p>
+                    <p>Az éves elszámolásnál először kaptam vissza pénz. kőszi fiúk!!!</p>
                 </div>
-                <div className='flex flex-col gap-2'>
+                <div className='flex flex-col gap-2 w-full'>
                     <p className='font-bold'>József</p>
                     <p>Somogyudvarhely</p>
                 </div>
                 </div>  
 
-                <div className='flex flex-col justify-center items-center gap-4 p-4 border rounded-xl w-[250px]'>
+                <div className='flex flex-col justify-between items-center gap-4 p-4 border rounded-xl min-w-[250px]'>
+                <div className='flex'>
+                    <AiFillStar />
+                    <AiFillStar />
+                    <AiFillStar />
+                    <AiFillStar />
+                </div>
+                <div>
+                    <p>Drágállottam kicsit meglátjuk, hogy szuperál.... a fiúk amúgy jófejek voltak.</p>
+                </div>
+                <div className='flex flex-col gap-2 w-full'>
+                    <p className='font-bold'>Erika</p>
+                    <p>Balatonfüred</p>
+                </div>
+                </div>
+
+                <div className='flex flex-col justify-between items-center gap-4 p-4 border rounded-xl min-w-[250px]'>
                 <div className='flex'>
                     <AiFillStar />
                     <AiFillStar />
@@ -157,11 +173,11 @@ export default function Velemenyek() {
                     <AiFillStar />
                 </div>
                 <div>
-                    <p>Nagyon elégedett vagyok a púrhab szigeteléssel! Azonnal észrevettem a különbséget a hőmérsékletben, és a fűtésszámlám is jelentősen csökkent. Köszönöm a szakszerű és gyors munkát!</p>
+                    <p>Régi kádárkocka padlását szigeteltük, csak stuka volt előtte. Konkrétan a szigetelés után este már meleg volt a plafon, a garázst is ezzel fogjuk ezek után.</p>
                 </div>
-                <div className='flex flex-col gap-2'>
-                    <p className='font-bold'>József</p>
-                    <p>Somogyudvarhely</p>
+                <div className='flex flex-col gap-2 w-full'>
+                    <p className='font-bold'>Szilvi</p>
+                    <p>Taszár</p>
                 </div>
                 </div>
             </div>

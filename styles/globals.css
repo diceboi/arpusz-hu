@@ -186,7 +186,7 @@ body {
   padding-bottom: 25px;
   opacity: 1;
   top: 0;
-  max-height: 200px;
+  max-height: 500px;
   padding-top: 16px;
   padding-bottom: 16px;
 }
@@ -253,4 +253,27 @@ body {
 .email-grid-display {
   grid-template-columns: 1fr 3fr;
   grid-template-rows: 1fr 3fr;
+}
+
+/*Scrollbar*/
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+  border-radius: 20px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #e7e7e7;  
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #000; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #000; 
 }
