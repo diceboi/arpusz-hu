@@ -1,5 +1,6 @@
 import CtaHome from '@/components/homepage/cta-home'
 import Image from 'next/image'
+import { FaCrown } from 'react-icons/fa'
 
 export default function PurhabrolBovebben() {
     return(
@@ -21,7 +22,8 @@ export default function PurhabrolBovebben() {
             
                 <div className='absolute bottom-0 left-0 bg-[#06A452] w-full h-full rounded-full blur-3xl opacity-10 z-0'></div>
                   
-                  <div className='flex w-11/12 lg:w-8/12 bg-white shadow-xl rounded-xl z-[4] ease-in-animation'>
+                  <div className='relative flex w-11/12 lg:w-8/12 bg-white shadow-xl rounded-xl z-[4] ease-in-animation'>
+                    <FaCrown className='absolute w-14 h-14 text-[#06A452] -top-11 -left-5 -rotate-12'/>
                     <div className='w-1/3 p-4'><Image className='rounded-lg' src='/purhab.jpg' height={500} width={400}></Image></div>
                     <div className='flex flex-col justify-between '>
                       <h2 className='pt-4 uppercase font-bold text-xl'>Zárt cellás púrhab</h2>
@@ -100,73 +102,80 @@ export default function PurhabrolBovebben() {
 
             </div>
 
-            <div className='flex flex-col lg:flex-row w-11/12 lg:w-8/12 m-auto gap-4 py-16'>
+            <div className='grid grid-cols-1 grid-rows-4 lg:grid-cols-2 lg:grid-rows-2 w-11/12 lg:w-8/12 m-auto gap-4 py-16'>
 
-            <div className='flex flex-col w-full items-center border border-neutral-200 rounded-xl p-4 my-4 hover:bg-white hover:shadow-xl hover:border-white transition-all'>   
 
-                <div className='relative flex justify-center items-center gap-4 w-full py-4 min-h-[100px]'>
-                    <Image width={50} height={50} src="/hoveszteseg-icon.svg" />
-                    <Image width={50} height={50} src="/nedvesseg-icon.svg" />
-                    <Image width={50} height={50} src="/hang-icon.svg" />
-                 </div>
 
-                <div className='flex flex-col items-end text-center w-full  gap-8'>
-                    <div className='flex flex-col gap-8 w-full'>
-                    <h1 className='font-black text-2xl'>Hő, hang és vízszigetelés egyben</h1>
-                    <p>A púrhab nem csak a hőveszteséget tudja jelentősen csökkenteni, hanem a hang és vízszigetelésben is rendkívül hatékony. Nem véletlenül használnak zárt cellás púrhabot lapostetők, pincék, padlások és egyéb erősen nedvességnek, és hanghatásoknak kitett helyek szigetelésénél.</p>              
-                    </div>          
+                <div className='flex flex-col w-full items-center border border-neutral-200 rounded-xl p-4 hover:bg-white hover:shadow-xl hover:border-white transition-all'>   
+
+                    <div className='relative flex justify-center items-center gap-4 w-full py-4 min-h-[100px]'>
+                        <Image width={50} height={50} src="/hoveszteseg-icon.svg" />
+                        <Image width={50} height={50} src="/nedvesseg-icon.svg" />
+                        <Image width={50} height={50} src="/hang-icon.svg" />
+                    </div>
+
+                    <div className='flex flex-col items-end text-center w-full  gap-8'>
+                        <div className='flex flex-col gap-8 w-full'>
+                        <h1 className='font-black text-2xl'>Hő, hang és vízszigetelés egyben</h1>
+                        <p>A púrhab nem csak a hőveszteséget tudja jelentősen csökkenteni, hanem a hang és vízszigetelésben is rendkívül hatékony. Nem véletlenül használnak zárt cellás púrhabot lapostetők, pincék, padlások és egyéb erősen nedvességnek, és hanghatásoknak kitett helyek szigetelésénél.</p>              
+                        </div>          
+                    </div>
+
                 </div>
+
+                <div className='flex flex-col w-full items-center border border-neutral-200 rounded-xl p-4 hover:bg-white hover:shadow-xl hover:border-white transition-all'>  
+
+                    <div className='relative flex justify-center items-center gap-4 w-full min-h-[100px]'>
+                        <Image width={50} height={50} src="/fast.svg" />
+                      
+
+                    </div> 
+
+                    <div className='flex flex-col  items-end text-center w-full gap-8'>
+                        <div className='flex flex-col gap-8 w-full'>
+                        <h1 className='font-black text-2xl'>Pár óra, és kész!</h1>
+                        <p>A púrhab a leggyorsabban kivitelezhető szigetelési forma. Nem kell ragasztót keverni, méretre vágni a darabokat, egyszerűen fel kell fújni a felületre, és perceken belül elnyeri végső állapotát.</p>              
+                        </div>          
+                    </div>
+
+
 
             </div>
 
-            <div className='flex flex-col w-full items-center border border-neutral-200 rounded-xl p-4 my-4  hover:bg-white hover:shadow-xl hover:border-white transition-all'>  
 
-                <div className='relative flex justify-center items-center gap-4 w-full min-h-[100px]'>
-                    <Image width={50} height={50} src="/fast.svg" />
-                  
+              <div className='flex flex-col w-full items-center border border-neutral-200 rounded-xl p-4 hover:bg-white hover:shadow-xl hover:border-white transition-all'>   
 
-                </div> 
+                  <div className='relative flex justify-center items-center gap-4 w-full min-h-[100px]'>
+                      <Image width={50} height={50} src="/noharm.svg" />
+                    
 
-                <div className='flex flex-col  items-end text-center w-full gap-8'>
-                    <div className='flex flex-col gap-8 w-full'>
-                    <h1 className='font-black text-2xl'>Pár óra, és kész!</h1>
-                    <p>A púrhab a leggyorsabban kivitelezhető szigetelési forma. Nem kell ragasztót keverni, méretre vágni a darabokat, egyszerűen fel kell fújni a felületre, és perceken belül elnyeri végső állapotát.</p>              
-                    </div>          
-                </div>
+                  </div>
 
-            </div>
+                  <div className='flex flex-col  items-end text-center w-full  gap-8'>
+                      <div className='flex flex-col gap-8 w-full'>
+                      <h1 className='font-black text-2xl'>Nem káros</h1>
+                      <p>Megszilárdulás után nem káros az egészségre, nem táplálja az égést, nem bomlik le, emellett megfelelő felhelyezés esetén nem is gombásodik.</p>              
+                      </div>          
+                  </div>                
 
-            <div className='flex flex-col w-full items-center border border-neutral-200 rounded-xl p-4 my-4  hover:bg-white hover:shadow-xl hover:border-white transition-all'>   
+              </div>
 
-                <div className='relative flex justify-center items-center gap-4 w-full min-h-[100px]'>
-                    <Image width={50} height={50} src="/noharm.svg" />
-                  
+              <div className='flex flex-col w-full items-center border border-neutral-200 rounded-xl p-4 hover:bg-white hover:shadow-xl hover:border-white transition-all'>  
 
-                </div>
+                  <div className='relative flex justify-center items-center gap-4 w-full min-h-[100px]'>
+                      <Image width={50} height={50} src="/toredezes-icon.svg" />
+                    
 
-                <div className='flex flex-col  items-end text-center w-full  gap-8'>
-                    <div className='flex flex-col gap-8 w-full'>
-                    <h1 className='font-black text-2xl'>Nem káros</h1>
-                    <p>Megszilárdulás után nem káros az egészségre, nem táplálja az égést, nem bomlik le, emellett megfelelő felhelyezés esetén nem is gombásodik.</p>              
-                    </div>          
-                </div>                
+                  </div> 
 
-            </div>
+                  <div className='flex flex-col  items-end text-center w-full  gap-8'>
+                      <div className='flex flex-col gap-8 w-full'>
+                      <h1 className='font-black text-2xl'>Nincs veszteség</h1>
+                      <p>A megkeményedett púrhab nem zsugorodik, idővel sem porlad, illetve nincs vágási veszteség, maradék. Minden ráfordított forint beépül az épületbe. </p>              
+                      </div>          
+                  </div>
 
-            <div className='flex flex-col w-full items-center border border-neutral-200 rounded-xl p-4 my-4  hover:bg-white hover:shadow-xl hover:border-white transition-all'>  
 
-                <div className='relative flex justify-center items-center gap-4 w-full min-h-[100px]'>
-                    <Image width={50} height={50} src="/toredezes-icon.svg" />
-                  
-
-                </div> 
-
-                <div className='flex flex-col  items-end text-center w-full  gap-8'>
-                    <div className='flex flex-col gap-8 w-full'>
-                    <h1 className='font-black text-2xl'>Nincs veszteség</h1>
-                    <p>A megkeményedett púrhab nem zsugorodik, idővel sem porlad, illetve nincs vágási veszteség, maradék. Minden ráfordított forint beépül az épületbe. </p>              
-                    </div>          
-                </div>
 
             </div>
 
@@ -179,7 +188,7 @@ export default function PurhabrolBovebben() {
               <p  className='text-center text-xl w-11/12 lg:w-1/2 m-auto py-2'>Bemutatjuk mi is történik a kivitelezés néhány órája alatt</p>
             </div>
 
-            <div className='flex flex-col lg:flex-row w-11/12 lg:w-8/12 items-center border-t border-neutral-300 mt-8'>
+            <div className='flex flex-col gap-4 lg:flex-row w-11/12 lg:w-8/12 items-center border-t border-neutral-300 mt-8'>
 
 
               <div className='flex flex-col items-center lg:items-start w-11/12 lg:w-1/2 py-12 '>
@@ -205,7 +214,7 @@ export default function PurhabrolBovebben() {
 
 
 
-            <div className='flex flex-col lg:flex-row w-11/12 lg:w-8/12 items-center border-t border-neutral-300 mt-8'>
+            <div className='flex flex-col gap-4 lg:flex-row w-11/12 lg:w-8/12 items-center border-t border-neutral-300 mt-8'>
 
 
               <div className='flex flex-col items-center lg:items-start w-11/12 lg:w-1/2 py-12'>
@@ -231,7 +240,7 @@ export default function PurhabrolBovebben() {
 
 
 
-            <div className=' flex flex-col lg:flex-row w-11/12 lg:w-8/12 items-center border-t border-neutral-300 mt-8'>
+            <div className=' flex flex-col gap-4 lg:flex-row w-11/12 lg:w-8/12 items-center border-t border-neutral-300 mt-8'>
 
 
               <div className='flex flex-col items-center lg:items-start w-11/12 lg:w-1/2 py-12 '>

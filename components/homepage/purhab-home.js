@@ -2,6 +2,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import MainCTA from '@/components/maincta'
 import SecondaryCTA from '@/components/secondarycta'
+import {FaCrown} from 'react-icons/fa'
 
 
 export default function Purhab() {
@@ -19,9 +20,10 @@ export default function Purhab() {
                     
                     <div className='absolute bottom-0 left-0 bg-[#06A452] w-full h-full rounded-full blur-3xl opacity-10 z-0'></div>
                     
-                    <div className='flex w-11/12 lg:w-8/12 bg-white shadow-xl rounded-xl z-[4] ease-in-animation'>
+                    <div className='relative flex w-11/12 lg:w-8/12 bg-white shadow-xl rounded-xl z-[4] ease-in-animation'>
+                        <FaCrown className='absolute w-14 h-14 text-[#06A452] -top-11 -left-5 -rotate-12'/>
                         <div className='w-1/3 p-4'><Image className='rounded-lg' src='/purhab.jpg' height={500} width={400}></Image></div>
-                        <div className='flex flex-col justify-between '>
+                        <div className='flex flex-col justify-between'>
                         <h2 className='pt-4 uppercase font-bold text-xl'>Zárt cellás púrhab</h2>
                         <div className='py-4'>
                             <p className='text-md'>U-érték (λ):</p>

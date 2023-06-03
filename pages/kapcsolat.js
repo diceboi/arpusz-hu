@@ -20,9 +20,9 @@ export default function Blog() {
                 <p  className='text-center text-xl w-11/12 lg:w-1/2 m-auto py-2'>Ha kérdésed van, vagy megbíznál bennünket.</p>
             </div>
             <div className='flex flex-col gap-4 w-11/12 lg:w-1/3'>
-                <input type='text' placeholder='Vezetéknév' className='border border-neutral-200 p-2'/>
-                <input type='text' placeholder='Keresztnév' className='border border-neutral-200 p-2'/>
-                <input type='text' placeholder='E-mail cím' className='border border-neutral-200 p-2'/>
+                <input type='fname' placeholder='Vezetéknév' className='border border-neutral-200 p-2'/>
+                <input type='lname' placeholder='Keresztnév' className='border border-neutral-200 p-2'/>
+                <input type='email' placeholder='E-mail cím' className='border border-neutral-200 p-2'/>
                 <textarea placeholder='Üzenet' rows='10' className='border border-neutral-200 p-2'/>
                 <input type='submit' className='px-6 py-3 bg-gradient-to-r from-[#06A452] to-[#0DC666] hover:shadow-[#06a4522f] hover:shadow-xl transition-all text-white text-lg rounded-md cursor-pointer'/>
                 <p  className='text-center text-xl m-auto pb-16 pt-12'>Ha árat szeretnél számolni, 3 lépésben könnyedén megteheted felesleges várakozás nélkül.</p>

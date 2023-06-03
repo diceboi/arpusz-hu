@@ -35,8 +35,7 @@ export default function ReferenciakHome() {
                     </div>
                     </div>
                 </div>
-                <Link href="/referenciak"><SecondaryCTA>Még több referencia</SecondaryCTA></Link>
-                <Velemenyek/>
+                
             </section>
         </>
     )

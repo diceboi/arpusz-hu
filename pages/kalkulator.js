@@ -73,61 +73,58 @@ const calculatePrice = (type, thickness, area) => {
   const openCellPrices = {
     "0-100": {
       // vastagság: ár
-      3: 1500,
-      10: 5000,
-      15: 6500,
-      20: 9500,
-      25: 11200,
-      30: 12700
+      10: 5500,
+      15: 6600,
+      20: 7700,
+      25: 8800,
+      30: 9900
     },
     "100-150": {
-      3: 1500,
-      10: 4200,
-      15: 5700,
-      20: 7300,
-      25: 8600,
-      30: 9800
+      10: 4700,
+      15: 5800,
+      20: 6900,
+      25: 8000,
+      30: 9100
     },
     "150+": {
-      3: 1500,
-      10: 4000,
-      15: 5500,
-      20: 7000,
-      25: 8200,
-      30: 9300
+      10: 4500,
+      15: 5600,
+      20: 6700,
+      25: 7800,
+      30: 8900
     }
   };
 
   const closedCellPrices = {
     "0-100": {
-      3: 5100,
-      4: 6500,
-      5: 8000,
-      6: 9300,
-      7: 10600,
-      8: 11800,
-      9: 12900,
-      10: 14400
+      3: 5500,
+      4: 6600,
+      5: 7700,
+      6: 8800,
+      7: 9900,
+      8: 11000,
+      9: 12100,
+      10: 13200
     },
     "100-150": {
-      3: 4200,
-      4: 5200,
-      5: 6200,
-      6: 7200,
-      7: 8200,
-      8: 9100,
-      9: 10000,
-      10: 11000
+      3: 4700,
+      4: 5800,
+      5: 6900,
+      6: 8000,
+      7: 9100,
+      8: 10200,
+      9: 11300,
+      10: 12400
     },
     "150+": {
-      3: 4000,
-      4: 5000,
-      5: 6000,
-      6: 7000,
-      7: 7900,
-      8: 8800,
-      9: 9600,
-      10: 10700
+      3: 4200,
+      4: 5300,
+      5: 6400,
+      6: 7500,
+      7: 8600,
+      8: 9700,
+      9: 10800,
+      10: 11900
     }
   };
 
@@ -177,9 +174,13 @@ const handleRadioChange = () => {
   let thicknessInput = document.getElementById("vastagsag");
 
   if (type === "Zárt cellás") {
+    thicknessInput.min = "3";
     thicknessInput.max = "10";
+    thicknessInput.step = "1";
   } else {
+    thicknessInput.min = "10";
     thicknessInput.max = "30";
+    thicknessInput.step = "5";
   }
 };
 
@@ -310,7 +311,7 @@ const handleSubmit = () => {
                         <div className='flex flex-col lg gap-8 justify-center items-center w-full lg:h-1/2'>
                           
                           <fieldset className='flex items-center lg:items-baseline justify-center gap-2 w-full lg:w-1/2 pt-8'>
-                            <input type='text' id='felulet' className='border border-[#06a452] rounded-sm h-12 p-2 w-8/12 lg:w-1/2' placeholder='pl.: 35m2'/>
+                            <input type='number' id='felulet' className='border border-[#06a452] rounded-sm h-12 p-2 w-8/12 lg:w-1/2' placeholder='pl.: 35m2'/>
                             <label>m2</label>
                           </fieldset>
 

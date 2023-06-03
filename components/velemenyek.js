@@ -185,7 +185,7 @@ export default function Velemenyek() {
         </div>    
 
 
-        <Link href="/kalkulator"><MainCTA>Tovább a kalkulátorhoz</MainCTA></Link>
+        
         </>
     )
 }
