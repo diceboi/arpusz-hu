@@ -14,6 +14,7 @@ import ReferenciakHome from '@/components/homepage/referenciak-home'
 import GyikHome from '@/components/homepage/gyik-home'
 import BlogHome from '@/components/homepage/blog-home'
 import CtaHome from '@/components/homepage/cta-home'
+import Velemenyek from '@/components/velemenyek'
 
 export default function Home() {
   return (
@@ -23,6 +24,9 @@ export default function Home() {
     <SzolgaltatasokHome/>
     <Lepesek/>
     <ReferenciakHome/>
+    <Link className='flex justify-center pb-4' href="/referenciak"><SecondaryCTA>Még több referencia</SecondaryCTA></Link>
+    <Velemenyek/>
+    
     <GyikHome/>
     <BlogHome/>
     <CtaHome/>    
