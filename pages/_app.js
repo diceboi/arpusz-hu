@@ -7,11 +7,14 @@ const inter = Inter({ subsets: ['latin'] })
 
 export default function MyApp({ Component, pageProps, className }) {
   return (
+    <>
     <main className={inter.className}>
       <MainMenu />
       <Component {...pageProps} className="w-screen overflow-hidden">
       </Component >
       <Footer />
+      <MainCTA />
     </main>
+    </>
   )
 }
