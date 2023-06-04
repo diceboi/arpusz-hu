@@ -47,7 +47,7 @@ const fourthStep = () => {
 
 //Slider
 
-const [value, setValue] = useState(15)
+const [value, setValue] = useState(10)
 
 const handleSliderChange = (event) => {
   setValue(event.target.value);
@@ -197,7 +197,7 @@ return () => {
 };
 }, []);
 
-const handleSubmit = () => {
+const handleCalc = () => {
   let type = document.querySelector('input[name="status"]:checked').dataset.type;
   let thickness = parseInt(document.getElementById("vastagsag").value);
   let area = parseInt(document.getElementById("felulet").value);
@@ -207,7 +207,6 @@ const handleSubmit = () => {
   if (!isNaN(thickness) && !isNaN(area)) {
     const totalPrice = calculatePrice(type, thickness, area);
     if (totalPrice !== null) {
-      console.log({totalPrice});
       const vatPrice = totalPrice * 1.27;
       // Itt megjelenítheti az árat a felhasználónak, például egy modalban vagy egy szövegcímkében
       vegsoar.innerHTML = totalPrice;
@@ -222,6 +221,53 @@ const handleSubmit = () => {
     // Itt jelezheti a felhasználónak, hogy hiányzik a vastagság vagy a terület értéke
   }
 };
+
+//Email küldés
+
+
+async function handleSubmit(event) {
+  event.preventDefault();
+
+  //Púrhab típus
+  const fieldsetElement = document.getElementById('type');
+  const selectedRadio = fieldsetElement.querySelector('input[name="status"]:checked');
+
+  let type = '';
+  if (selectedRadio) {
+    type = selectedRadio.dataset.type;
+  } else {
+    // Nincs kiválasztott gomb, itt kezeld le az esetet
+    type = 'Nincs kiválasztott púrhab típus';
+  }
+
+  //Vastagság
+  const vastagsagInput = document.getElementById('vastagsag');
+  const vastagsagValue = vastagsagInput.value;
+
+  const data = {
+    type: type,
+    vastagsag: String(vastagsagValue),
+    felulet: String(event.target.felulet.value),
+    zipcode: String(event.target.irszam.value),
+    email: String(event.target.email.value),
+  }
+
+  const response = await fetch("/api/contact", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(data),
+  })
+
+  if (response.ok) {
+    console.log("A küldés sikeres")
+  }
+  if (!response.ok) {
+    console.log("A küldés sikertelen")
+  }
+
+}
 
 
 
@@ -268,7 +314,7 @@ const handleSubmit = () => {
                         <h1 className='flex items-center gap-4 top-0 text-md lg:text-xl uppercase tracking-widest p-4 lg:p-0'>Válaszd ki a szigetelés típusát.<button onClick={() => setIsOpen1(true)} className='flex justify-center items-center bg-neutral-200 text-black rounded-full w-auto px-2 h-10'>Súgó</button></h1>
                         
 
-                        <fieldset className='flex gap-8 justify-center items-center w-full h-1/2 p-4 leading-5'>
+                        <fieldset id='type' className='flex gap-8 justify-center items-center w-full h-1/2 p-4 leading-5'>
 
                           <input id="draft" className="peer/draft hidden" type="radio" name="status" data-type="Nyitott cellás" />
                           <label htmlFor="draft" className="flex flex-col justify-center items-center border border-neutral-200 rounded-xl h-full p-8 hover:shadow-xl transition-all  cursor-pointer peer-checked/draft:bg-[#06A452] peer-checked/draft:text-white"><p className=' uppercase text-md lg:text-2xl font-black'>Nyitott cellás</p> púrhab szigetelés</label>
@@ -305,13 +351,13 @@ const handleSubmit = () => {
                 </div>
 
                 <div className='flex justify-center items-center w-[360px] lg:w-[1024px] mr-[664px] lg:mr-0 py-10'>
-                    <div className='flex flex-col items-center justify-around h-full w-[360px] lg:w-full'>
+                    <form onSubmit={handleSubmit} className='flex flex-col items-center justify-around h-full w-[360px] lg:w-full'>
                         <h1 className='top-0 text-md lg:text-xl uppercase text-center lg:tracking-widest'>Add meg a szigetelni kívánt felület méretét</h1>
                         
                         <div className='flex flex-col lg gap-8 justify-center items-center w-full lg:h-1/2'>
                           
                           <fieldset className='flex items-center lg:items-baseline justify-center gap-2 w-full lg:w-1/2 pt-8'>
-                            <input type='number' id='felulet' className='border border-[#06a452] rounded-sm h-12 p-2 w-8/12 lg:w-1/2' placeholder='pl.: 35m2'/>
+                            <input type='number' required id='felulet' className='border border-[#06a452] rounded-sm h-12 p-2 w-8/12 lg:w-1/2' placeholder='pl.: 35'/>
                             <label>m2</label>
                           </fieldset>
 
@@ -321,8 +367,8 @@ const handleSubmit = () => {
 
                               <div className='flex flex-col lg:flex-row gap-4 w-full py-4'>
 
-                                <input type='text' id='irszam' className='bg-neutral-200 rounded-sm  p-2 w-full' placeholder='Irányítószám'/>
-                                <input type='email' id='email' className='bg-neutral-200 rounded-sm  p-2 w-full' placeholder='E-mail cím'/>
+                                <input type='text' required id='irszam' className='bg-neutral-200 rounded-sm  p-2 w-full' placeholder='Irányítószám'/>
+                                <input type='email' required id='email' className='bg-neutral-200 rounded-sm  p-2 w-full' placeholder='E-mail cím'/>
 
                               </div>
 
@@ -333,12 +379,12 @@ const handleSubmit = () => {
                         </div>
 
                         <div className='flex gap-4 pt-4'>
-                          <button onClick={secondStep} className='py-2 px-4 border border-neutral-200 rounded-md'>Vissza</button>
-                          <button onClick={() => {fourthStep(); handleSubmit();}} className='py-2 px-4 bg-gradient-to-r from-[#06A452] to-[#0DC666] text-white border-transparent rounded-md'>Kérem az árat</button>
+                          <input type="button" onClick={secondStep} className="py-2 px-4 border border-neutral-200 rounded-md cursor-pointer" value="Vissza" />
+                          <button type='submit' onClick={() => {fourthStep(); handleCalc()}} className='py-2 px-4 bg-gradient-to-r from-[#06A452] to-[#0DC666] text-white border-transparent rounded-md'>Kérem az árat</button>
                         </div>
 
                         <p className='flex flex-col text-center text-sm w-full py-4'>A Kérem az árat gombra kattintva elfogadom az <a href='#' className='text-[#06a452] cursor-pointer'>adatkezelési tájékoztatóban</a> foglaltakat.</p>
-                    </div>
+                    </form>
                 </div>
 
                 <div className='flex justify-center items-center w-[360px] lg:w-[1024px] mr-[664px] lg:mr-0 py-10'>
