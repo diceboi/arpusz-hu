@@ -4,9 +4,9 @@ import { AiFillStar } from 'react-icons/ai'
 import { BiChevronDown } from 'react-icons/bi'
 import { FaRegEnvelope } from 'react-icons/fa'
 import Link from 'next/link'
-import MainCTA from '@/components/maincta'
-import SecondaryCTA from '@/components/secondarycta'
-import CtaHome from '@/components/homepage/cta-home'
+import MainCTA from '../components/maincta'
+import SecondaryCTA from '../components/secondarycta'
+import CtaHome from '../components/homepage/cta-home'
 
 
 export default function Blog() {

@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import { useState, useEffect } from 'react'
 import { GrClose } from 'react-icons/gr'
-import Velemenyek from '@/components/velemenyek'
+import Velemenyek from '../components/velemenyek'
 
 export default function Szolgaltatasok() {
 

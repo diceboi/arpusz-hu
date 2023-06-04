@@ -3,8 +3,8 @@ import Link from 'next/link'
 import { Inter } from 'next/font/google'
 import { AiFillStar } from 'react-icons/ai'
 import { BiChevronDown } from 'react-icons/bi'
-import SzolgaltatasokHome from '@/components/homepage/szolgaltatasok-home'
-import CtaHome from '@/components/homepage/cta-home'
+import SzolgaltatasokHome from '../components/homepage/szolgaltatasok-home'
+import CtaHome from '../components/homepage/cta-home'
 
 
 export default function Szolgaltatasok() {

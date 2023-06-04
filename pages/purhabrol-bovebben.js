@@ -1,4 +1,4 @@
-import CtaHome from '@/components/homepage/cta-home'
+import CtaHome from '../components/homepage/cta-home'
 import Image from 'next/image'
 import { FaCrown } from 'react-icons/fa'
 

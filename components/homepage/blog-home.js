@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import SecondaryCTA from '@/components/secondarycta'
+import SecondaryCTA from '../secondarycta'
 
 
 export default function BlogHome() {

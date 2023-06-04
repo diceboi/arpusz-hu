@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import MainCTA from '@/components/maincta'
-import SecondaryCTA from '@/components/secondarycta'
+import MainCTA from '../maincta'
+import SecondaryCTA from '../secondarycta'
 
 export default function Hero() {
     return(

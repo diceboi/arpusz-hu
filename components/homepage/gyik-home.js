@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import MainCTA from '@/components/maincta'
+import MainCTA from '../maincta'
 
 export default function GyikHome() {
     return(

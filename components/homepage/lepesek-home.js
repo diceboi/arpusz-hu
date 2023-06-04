@@ -2,7 +2,7 @@ import Image from 'next/image'
 import { AiFillStar } from 'react-icons/ai'
 import { FaRegEnvelope } from 'react-icons/fa'
 import Link from 'next/link'
-import MainCTA from '@/components/maincta'
+import MainCTA from '../maincta'
 
 
 export default function Lepesek() {

@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import SecondaryCTA from '@/components/secondarycta'
-import CtaHome from '@/components/homepage/cta-home'
+import SecondaryCTA from '../components/secondarycta'
+import CtaHome from '../components/homepage/cta-home'
 
 
 export default function Blog() {
