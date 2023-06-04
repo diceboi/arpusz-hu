@@ -58,7 +58,7 @@ export default async function ContactAPI(req, res) {
                 <p>Szigetelni kívánt felület: ${felulet} m2</p>
                 <p>Szigetelés kalkulált nettó ára: ${nettoar} Ft + ÁFA</p>
                 <p>Szigetelés kalkulált bruttó ára: ${bruttoar} Ft </p>
-                <p>Irányítószod: ${zipcode}</p>
+                <p>Irányítószámod: ${zipcode}</p>
                 <p>E-mail címed: ${email}</p>
                 <br>
                 <h3>Amennyiben szeretnél visszahívást kérni, kérlek küld el erre a levélre válaszolva a telefonszámodat, és mi lehetőség szerint még a mai napon visszahívunk.</h3>
