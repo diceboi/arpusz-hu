@@ -239,12 +239,22 @@ async function handleSubmit(event) {
   const vastagsagInput = document.getElementById('vastagsag');
   const vastagsagValue = vastagsagInput.value;
 
+  //Bruttó ár
+  const bruttoarInput = document.getElementById('vatprice');
+  const bruttoarValue = bruttoarInput.innerHTML;
+
+  //Nettó ár
+  const nettoarInput = document.getElementById('vegsoar');
+  const nettoarValue = nettoarInput.innerHTML;
+
   const data = {
     type: type,
     vastagsag: String(vastagsagValue),
     felulet: String(event.target.felulet.value),
     zipcode: String(event.target.irszam.value),
     email: String(event.target.email.value),
+    bruttoar: String(bruttoarValue),
+    nettoar: String(nettoarValue),
   }
 
   const response = await fetch("/api/contact", {
