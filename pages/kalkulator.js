@@ -252,7 +252,7 @@ async function handleSubmit(event) {
     email: String(event.target.email.value),
   }
 
-  const response = await fetch("/api/contact", {
+  const response = await fetch("/api/contact.js", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
