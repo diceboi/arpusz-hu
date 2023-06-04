@@ -1,10 +1,5 @@
-import Image from 'next/image'
-import Link from 'next/link'
-import SecondaryCTA from './secondarycta'
-import { AiFillStar } from 'react-icons/ai'
 import { RiMapPinLine } from 'react-icons/ri'
 import Velemenyek from './velemenyek'
-import MainCTA from './maincta'
 import CtaHome from './homepage/cta-home'
 
 export default function ReferenciakPage() {

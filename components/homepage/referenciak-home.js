@@ -1,9 +1,4 @@
-import { AiFillStar } from 'react-icons/ai'
 import { RiMapPinLine } from 'react-icons/ri'
-import Link from 'next/link'
-import MainCTA from '@/components/maincta'
-import Velemenyek from '../velemenyek'
-import SecondaryCTA from '../secondarycta'
 
 
 

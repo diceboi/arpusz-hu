@@ -1,7 +1,5 @@
 import { AiFillStar } from 'react-icons/ai'
 import { BiRightArrowAlt, BiLeftArrowAlt, BiPaperPlane } from 'react-icons/bi'
-import Link from 'next/link'
-import MainCTA from '@/components/maincta'
 import { useState, useRef, useEffect } from 'react';
 
 

@@ -26,7 +26,6 @@ export default function Home() {
     <ReferenciakHome/>
     <Link className='flex justify-center pb-4' href="/referenciak"><SecondaryCTA>Még több referencia</SecondaryCTA></Link>
     <Velemenyek/>
-    
     <GyikHome/>
     <BlogHome/>
     <CtaHome/>    

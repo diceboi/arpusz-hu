@@ -1,11 +1,6 @@
 import Image from 'next/image'
-import { Inter } from 'next/font/google'
 import { useState, useEffect } from 'react'
-import { AiFillStar } from 'react-icons/ai'
-import { BiChevronDown } from 'react-icons/bi'
 import { GrClose } from 'react-icons/gr'
-
-import { Tooltip } from 'react-tooltip'
 import Velemenyek from '@/components/velemenyek'
 
 export default function Szolgaltatasok() {
