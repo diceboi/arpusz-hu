@@ -1,7 +1,11 @@
 import Image from 'next/image'
 import { useState, useEffect } from 'react'
+import { useRouter } from 'next/router'
 import { GrClose } from 'react-icons/gr'
+import { TiArrowSync } from 'react-icons/ti'
 import Velemenyek from '../components/velemenyek'
+import Link from 'next/link'
+import MainCTA from '../components/maincta'
 
 export default function Szolgaltatasok() {
 
@@ -54,10 +58,8 @@ const imageUrl = `/rangeslider/${value}slider.svg`;
 //Kalkulátor --------------------------------------------------
 
 const getPriceCategory = (area) => {
-  if (area <= 100) {
-    return "0-100";
-  } else if (area <= 150) {
-    return "100-150";
+  if (area <= 150) {
+    return "0-150";
   } else {
     return "150+";
   }
@@ -66,7 +68,7 @@ const getPriceCategory = (area) => {
 
 const calculatePrice = (type, thickness, area) => {
   const openCellPrices = {
-    "0-100": {
+    "0-150": {
       // vastagság: ár
       10: 5500,
       15: 6600,
@@ -74,24 +76,17 @@ const calculatePrice = (type, thickness, area) => {
       25: 8800,
       30: 9900
     },
-    "100-150": {
-      10: 4700,
-      15: 5800,
-      20: 6900,
-      25: 8000,
-      30: 9100
-    },
     "150+": {
-      10: 4500,
-      15: 5600,
-      20: 6700,
-      25: 7800,
-      30: 8900
+      10: 5250,
+      15: 6350,
+      20: 7450,
+      25: 8550,
+      30: 9650
     }
   };
 
   const closedCellPrices = {
-    "0-100": {
+    "0-150": {
       3: 5500,
       4: 6600,
       5: 7700,
@@ -101,25 +96,15 @@ const calculatePrice = (type, thickness, area) => {
       9: 12100,
       10: 13200
     },
-    "100-150": {
-      3: 4700,
-      4: 5800,
-      5: 6900,
-      6: 8000,
-      7: 9100,
-      8: 10200,
-      9: 11300,
-      10: 12400
-    },
     "150+": {
-      3: 4200,
-      4: 5300,
-      5: 6400,
-      6: 7500,
-      7: 8600,
-      8: 9700,
-      9: 10800,
-      10: 11900
+      3: 5250,
+      4: 6350,
+      5: 7450,
+      6: 8550,
+      7: 9650,
+      8: 10750,
+      9: 11850,
+      10: 12950
     }
   };
 
@@ -192,6 +177,8 @@ return () => {
 };
 }, []);
 
+const [isDisabled, setIsDisabled] = useState(false);
+
 const handleCalc = () => {
   let type = document.querySelector('input[name="status"]:checked').dataset.type;
   let thickness = parseInt(document.getElementById("vastagsag").value);
@@ -215,6 +202,8 @@ const handleCalc = () => {
     console.log("Kérjük, adja meg a szigetelés vastagságát és területét.");
     // Itt jelezheti a felhasználónak, hogy hiányzik a vastagság vagy a terület értéke
   }
+
+  setIsDisabled(true);
 };
 
 //Email küldés
@@ -273,6 +262,14 @@ async function handleSubmit(event) {
   }
 
 }
+
+//Oldal frissítése (Új kalkuláció)
+const router = useRouter();
+
+  const handleButtonClick = () => {
+    // Frissítsd az oldalt
+    router.reload();
+  };
 
 
 
@@ -385,7 +382,7 @@ async function handleSubmit(event) {
 
                         <div className='flex gap-4 pt-4'>
                           <input type="button" onClick={secondStep} className="py-2 px-4 border border-neutral-200 rounded-md cursor-pointer" value="Vissza" />
-                          <button type='submit' onClick={() => {fourthStep(); handleCalc()}} className='py-2 px-4 bg-gradient-to-r from-[#06A452] to-[#0DC666] text-white border-transparent rounded-md'>Kérem az árat</button>
+                          <button type='submit' onClick={() => {fourthStep(); handleCalc()}}  className='py-2 px-4 bg-gradient-to-r from-[#06A452] to-[#0DC666] text-white border-transparent rounded-md'>Kérem az árat</button>
                         </div>
 
                         <p className='flex flex-col text-center text-sm w-full py-4'>A Kérem az árat gombra kattintva elfogadom az <a href='#' className='text-[#06a452] cursor-pointer'>adatkezelési tájékoztatóban</a> foglaltakat.</p>
@@ -404,8 +401,10 @@ async function handleSubmit(event) {
                           <div className='flex gap-2 items-baseline'>
                             <p className='text-sm lg:text-md uppercase'>bruttó</p><h3 id='vatprice' className='text-sm lg:text-xl font-bold'></h3><p>Ft</p>
                           </div>
+                          <div className='flex gap-2 items-center justify-center'>
+                            <MainCTA><Link href="" onClick={handleButtonClick} className='flex justify-center items-center'><TiArrowSync className=' w-8 h-8'/> Újrakalkulálás</Link></MainCTA>
+                          </div>
                           
-
                         </div>
 
                         <p className='text-sm w-11/12 text-center lg:w-full'>A kalkulált ár nem minősül árajánlattételnek. Kizárólag tájékoztatás jellegű célokat szolgál.</p>

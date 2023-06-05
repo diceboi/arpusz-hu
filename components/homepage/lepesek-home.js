@@ -202,7 +202,7 @@ export default function Lepesek() {
                     <div className='flex flex-col items-center lg:items-end w-11/12 lg:w-[49%] text-center gap-8'>
                     <div className='flex flex-col gap-8 w-full lg:w-8/12'>
                     <h1 className='font-black text-3xl'>Egyeztetés</h1>
-                    <p>A telefonos vagy email-es egyeztetés után lefixáljuk az árat, és amennyiben szükséges, megbeszélünk egy helyszíni felmérést. Az ilyen felmérés általában csak nagyobb projecteknél szükséges, családi házak illetve azokhoz kapcsolódó melléképületek szigetelésénél általában nincs szükség rá.
+                    <p>A telefonos vagy email-es egyeztetés után lefixáljuk az árat, és amennyiben szükséges, megbeszélünk egy helyszíni felmérést.
                     </p>
                     </div>          
                     </div>
