@@ -1,18 +1,15 @@
 import nodemailer from "nodemailer";
 
 export default async function ContactAPI(req, res) {
-    const { type, vastagsag, felulet, zipcode, email, bruttoar, nettoar } = req.body;
+    const { fname, lname, email, message } = req.body;
     const user = process.env.user;
-    const customFrom = "Szabó Árpád | Arpusz.hu <info@arpusz.hu>";
+    const customFrom = "Szabó Árpád, Arpusz.hu <info@arpusz.hu>";
 
     const data = {
-        type,
-        vastagsag,
-        felulet,
-        zipcode,
+        fname,
+        lname,
         email,
-        bruttoar,
-        nettoar
+        message
     };
 
     const transporter = nodemailer.createTransport({
@@ -27,19 +24,17 @@ export default async function ContactAPI(req, res) {
 
     try {
         const mail = await transporter.sendMail({
-            from: "Arpusz.hu Kalkulátor",
+            from: `${email}`,
             to: "szasz.szabolcs1995@gmail.com",
-            replyTo: "szasz.szabolcs1995@gmail.com",
-            subject: `Új kalkuláció történt ${email} részéről`,
+            replyTo: `${email}`,
+            subject: `Kapcsolatfelvétel érkezett ${lname} ${fname} részéről`,
             html: `
-                <h1>Szia Árpi! Árkalkalkuláció történt az oldalon az alábbi adatokkal:</h1>
-                <p>Szigetelés típusa: ${type}</p>
-                <p>Szigetelés vastagsága: ${vastagsag} cm</p>
-                <p>Szigetelni kívánt felület: ${felulet} m2</p>
-                <p>Szigetelés kalkulált nettó ára: ${nettoar} Ft + ÁFA</p>
-                <p>Szigetelés kalkulált bruttó ára: ${bruttoar} Ft </p>                
-                <p>Helyszín irányítószáma: ${zipcode}</p>
-                <p>Ügyfél email címe: ${email}</p>
+                <h1>Szia Árpi! A kapcsolatfelvételi űrlapon írtak neked az alábbi adatokkal:</h1>
+                <p>Vezetéknév: ${lname}</p>
+                <p>Keresztnév: ${fname}</p>
+                <p>E-mail cím: ${email}</p>
+                <p>Üzenet: ${message}</p>
+                <h3>Válaszolj neki, amint lehetőséged adódik!</h3>
             `,
         });
 
@@ -47,24 +42,19 @@ export default async function ContactAPI(req, res) {
             from: customFrom,
             to: email,
             replyTo: "kapcsolat.arpusz@gmail.com",
-            subject: "Egy lépéssel közelebb az energiatakarékossághoz",
+            subject: "Köszönjuk, hogy felvetted velünk a kapcsolatot",
             html: `
-                <h1>Üdvözöllek!</h1>
-                <h3>Örülök, hogy kitöltötted a kalkulátorunkat, és érdeklődsz a púrhab szigetelés iránt. Garantálhatom, hogy jó irányba haladsz az energiatakarékosság és a hosszú távú komfort útján!<h3/>
+                <h1>Kedves ${fname}!</h1>
+                <h3>Örülök, hogy felvetted velünk a kapcsolatot, és érdeklődsz a púrhab szigetelés iránt. Igyekszünk minél hamarabb,a legjobb tudásunk szerint válaszolni neked!<h3/>
                 <br>
-                <h2>A kalkulációban bekért adataid:</h2>
-                <p>Szigetelés típusa: ${type}</p>
-                <p>Szigetelés vastagsága: ${vastagsag} cm</p>
-                <p>Szigetelni kívánt felület: ${felulet} m2</p>
-                <p>Szigetelés kalkulált nettó ára: ${nettoar} Ft + ÁFA</p>
-                <p>Szigetelés kalkulált bruttó ára: ${bruttoar} Ft </p>
-                <p>Irányítószámod: ${zipcode}</p>
-                <p>E-mail címed: ${email}</p>
+                <h2>Az üzeneted a következő volt:</h2>
+                <p>Vezetéknév: ${lname}</p>
+                <p>Keresztnév: ${fname}</p>
+                <p>E-mail cím: ${email}</p>
+                <p>Üzenet: ${message}</p>
                 <br>
-                <h3>Amennyiben szeretnél visszahívást kérni, kérlek küld el erre a levélre válaszolva a telefonszámodat, és mi lehetőség szerint még a mai napon visszahívunk.</h3>
-                <h3>Ha bármivel kapcsolatban kérdésed lenne, vagy megbíznál bennünket, keress minket bátran az alábbi elérhetőségeken:</h3>
-                <p>Tel:<br>+36 30 523 6866<br>+36 30 010 3001</p>
-                <p>E-mail: kapcsolat.arpusz@gmail.com</p>
+                <p style="font-size: 10px;"><i>Ez egy automatikus üzenet, kérlek ne válaszolj rá. A lehető leghamarabb keresni fogunk. Ha mégis valami égetően fontos ügyben szeretnél minket felkeresni, az alábbi telefonszámok egyikén megteheted:</i></p>
+                <p>+36 30 523 6866<br>+36 30 010 3001</p>
             `,
         });
 

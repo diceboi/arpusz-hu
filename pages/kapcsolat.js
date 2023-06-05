@@ -1,15 +1,48 @@
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
-import { AiFillStar } from 'react-icons/ai'
-import { BiChevronDown } from 'react-icons/bi'
-import { FaRegEnvelope } from 'react-icons/fa'
-import Link from 'next/link'
-import MainCTA from '../components/maincta'
-import SecondaryCTA from '../components/secondarycta'
 import CtaHome from '../components/homepage/cta-home'
+import { useState, useEffect } from 'react'
+import Recaptcha from '../components/recaptcha';
 
 
-export default function Blog() {
+export default function Kapcsolat() {
+
+    //ReCaptcha
+    
+    const [captchaResponse, setCaptchaResponse] = useState(null);
+
+    const handleCaptchaVerify = (response) => {
+        setCaptchaResponse(response);
+    };
+    
+
+    async function handleSubmit(event) {
+        event.preventDefault();        
+    
+        const data = {
+            fname: String(event.target.fname.value),
+            lname: String(event.target.lname.value),
+            email: String(event.target.email.value),
+            message: String(event.target.message.value),
+        }
+        
+        const response = await fetch("/api/contact", {
+            method: "POST",
+            headers: {
+            "Content-Type": "application/json",
+            },
+            body: JSON.stringify(data),
+        })
+        
+        if (response.ok) {
+            console.log("A küldés sikeres")
+        }
+        if (!response.ok) {
+            console.log("A küldés sikertelen")
+        }
+
+        console.log('Captcha Response:', captchaResponse);
+        
+    }
+
     return(
         <>
         <section className='flex flex-col justify-center items-center w-full overflow-hidden bg-white pt-[75px]'>
@@ -19,14 +52,15 @@ export default function Blog() {
                 <h1 className='text-center m-auto text-4xl lg:text-6xl font-black tracking-tighter py-2'>Kapcsolat</h1>
                 <p  className='text-center lg:text-lg w-11/12 lg:w-1/2 m-auto py-2 uppercase tracking-widest text-neutral-400 font-bold'>Ha kérdésed van, vagy megbíznál bennünket.</p>
             </div>
-            <div className='flex flex-col gap-4 w-11/12 lg:w-1/3'>
-                <input type='fname' placeholder='Vezetéknév' className='border border-neutral-200 p-2'/>
-                <input type='lname' placeholder='Keresztnév' className='border border-neutral-200 p-2'/>
-                <input type='email' placeholder='E-mail cím' className='border border-neutral-200 p-2'/>
-                <textarea placeholder='Üzenet' rows='10' className='border border-neutral-200 p-2'/>
-                <input type='submit' className='px-6 py-3 bg-gradient-to-r from-[#06A452] to-[#0DC666] hover:shadow-[#06a4522f] hover:shadow-xl transition-all text-white text-lg rounded-md cursor-pointer'/>
-                <p  className='text-center text-xl m-auto pb-16 pt-12'>Ha árat szeretnél számolni, 3 lépésben könnyedén megteheted felesleges várakozás nélkül.</p>
-            </div>          
+            <form onSubmit={handleSubmit} className='flex flex-col gap-4 w-11/12 lg:w-1/3'>
+                <input type='lname' id='lname' placeholder='Vezetéknév' className='border border-neutral-200 p-2'/>
+                <input type='fname' id='fname' placeholder='Keresztnév' className='border border-neutral-200 p-2'/>
+                <input type='email' id='email' placeholder='E-mail cím' className='border border-neutral-200 p-2'/>
+                <textarea placeholder='Üzenet' id='message' rows='10' className='border border-neutral-200 p-2'/>
+                <Recaptcha action="contact" onVerify={handleCaptchaVerify} />
+                <button type='submit' className='px-6 py-3 bg-gradient-to-r from-[#06A452] to-[#0DC666] hover:shadow-[#06a4522f] hover:shadow-xl transition-all text-white text-lg rounded-md cursor-pointer'>Küldés</button>
+                <p className='text-center text-xl m-auto pb-16 pt-12'>Ha árat szeretnél számolni, 3 lépésben könnyedén megteheted felesleges várakozás nélkül.</p>
+            </form>          
         </section>
 
         <CtaHome/>

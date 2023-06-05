@@ -7,7 +7,7 @@ import Velemenyek from '../components/velemenyek'
 import Link from 'next/link'
 import MainCTA from '../components/maincta'
 
-export default function Szolgaltatasok() {
+export default function Kalkulator() {
 
 const [isOpen1, setIsOpen1] = useState(false);
 
@@ -246,7 +246,7 @@ async function handleSubmit(event) {
     nettoar: String(nettoarValue),
   }
 
-  const response = await fetch("/api/contact", {
+  const response = await fetch("/api/calc", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
