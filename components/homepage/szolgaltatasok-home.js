@@ -1,11 +1,17 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import SecondaryCTA from '../secondarycta'
 
 
 export default function SzolgaltatasokHome() {
     return(
         <>
             <section className='flex flex-col justify-center items-center w-full overflow-hidden bg-neutral-100 shadow-inner shadow-neutral-200 py-12'>
+
+            <div className='flex flex-col w-8/12 py-8'>
+                    <h1 className='text-center m-auto text-4xl lg:text-6xl font-black tracking-tighter py-2'>Szolgáltatások</h1>
+                    <p  className='text-center lg:text-lg w-11/12 lg:w-1/2 m-auto py-2 uppercase tracking-widest text-neutral-400 font-bold'>Púrhab felhasználás sokszínűen</p>
+                </div>
       
 
                 <div className=' grid grid-cols-1 lg:grid-cols-3 lg:grid-rows-4 gap-4 w-11/12 lg:w-8/12 m-auto items-center py-8 '>
@@ -131,6 +137,8 @@ export default function SzolgaltatasokHome() {
 
 
                 </div>
+
+                <Link href="/szolgaltatasok"><SecondaryCTA>Bővebben</SecondaryCTA></Link>
 
             </section>
             

@@ -295,7 +295,7 @@ const router = useRouter();
     <section className='flex flex-col justify-center items-center w-full overflow-hidden bg-white pb-12 pt-[75px]'>
       <div className='flex flex-col w-11/12 lg:w-8/12 py-8'>
         <h1 className='text-center m-auto text-4xl lg:text-6xl font-black tracking-tighter py-2'>Kalkulátor</h1>
-        <p  className='text-center text-xl w-11/12 lg:w-1/2 m-auto py-2'>Számold ki 3 lépésben a te igényeidnek megfelelő szigetelés árát</p>
+        <p  className='text-center lg:text-lg w-11/12 lg:w-1/2 m-auto py-2 uppercase tracking-widest text-neutral-400 font-bold'>Számold ki 3 lépésben a te igényeidnek megfelelő szigetelés árát</p>
       </div>
 
         <div className='flex justify-center items-center gap-4 -mb-[53px] text-center w-11/12 lg:w-full z-10'>

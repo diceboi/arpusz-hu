@@ -17,7 +17,7 @@ export default function Blog() {
         <div className='absolute top-0 right-0 bg-[#06A452] w-[100px] lg:w-[500px] h-[100px] lg:h-[500px] rounded-full blur-3xl opacity-10 z-10'></div>
             <div className='flex flex-col w-11/12 lg:w-8/12 py-8'>
                 <h1 className='text-center m-auto text-4xl lg:text-6xl font-black tracking-tighter py-2'>Kapcsolat</h1>
-                <p  className='text-center text-xl w-11/12 lg:w-1/2 m-auto py-2'>Ha kérdésed van, vagy megbíznál bennünket.</p>
+                <p  className='text-center lg:text-lg w-11/12 lg:w-1/2 m-auto py-2 uppercase tracking-widest text-neutral-400 font-bold'>Ha kérdésed van, vagy megbíznál bennünket.</p>
             </div>
             <div className='flex flex-col gap-4 w-11/12 lg:w-1/3'>
                 <input type='fname' placeholder='Vezetéknév' className='border border-neutral-200 p-2'/>

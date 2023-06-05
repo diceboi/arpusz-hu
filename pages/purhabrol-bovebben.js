@@ -10,7 +10,7 @@ export default function PurhabrolBovebben() {
 
           <div className='flex flex-col w-11/12 lg:w-8/12 py-8'>
             <h1 className='text-center m-auto text-4xl lg:text-6xl font-black tracking-tighter py-2'>Miért a púrhab?</h1>
-            <p  className='text-center text-xl w-11/12 lg:w-1/2 m-auto py-2'>A Púrhab a hőszigetelések etalonja</p>
+            <p  className='text-center lg:text-lg w-11/12 lg:w-1/2 m-auto py-2 uppercase tracking-widest text-neutral-400 font-bold'>A Púrhab a hőszigetelések etalonja</p>
           </div>
 
             <div className='flex flex-col lg:flex-row w-full lg:w-8/12 items-center'>
@@ -185,7 +185,7 @@ export default function PurhabrolBovebben() {
 
             <div className='flex flex-col w-11/12 lg:w-8/12 py-8'>
               <h1 className='text-center m-auto text-4xl lg:text-6xl font-black tracking-tighter py-2'>Hogy történik a kivitelezés?</h1>
-              <p  className='text-center text-xl w-11/12 lg:w-1/2 m-auto py-2'>Bemutatjuk mi is történik a kivitelezés néhány órája alatt</p>
+              <p  className='text-center lg:text-lg w-full lg:w-1/2 m-auto py-2 uppercase tracking-widest text-neutral-400 font-bold'>Bemutatjuk mi is történik a kivitelezés néhány órája alatt</p>
             </div>
 
             <div className='flex flex-col gap-4 lg:flex-row w-11/12 lg:w-8/12 items-center border-t border-neutral-300 mt-8'>

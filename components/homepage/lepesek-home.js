@@ -12,7 +12,7 @@ export default function Lepesek() {
 
                 <div className='flex flex-col w-8/12 py-8'>
                     <h1 className='text-center m-auto text-4xl lg:text-6xl font-black tracking-tighter py-2'>Hogyan lesz Púrhab szigetelésed?</h1>
-                    <p  className='text-center lg:text-xl w-11/12 lg:w-1/2 m-auto py-2'>4 + 1 lépésben megmutatjuk, mennyire egyszerűen lehet neked is egy energiahatékony és komfortos épületed.</p>
+                    <p  className='text-center lg:text-lg w-11/12 lg:w-1/2 m-auto py-2 uppercase tracking-widest text-neutral-400 font-bold'>4 + 1 lépésben megmutatjuk, mennyire egyszerűen lehet neked is egy energiahatékony és komfortos épületed.</p>
                 </div>
 
                 <div className='relative flex flex-col-reverse lg:flex-row w-11/12 lg:w-8/12 items-center h-auto'>
@@ -99,7 +99,7 @@ export default function Lepesek() {
                         <div className='flex flex-col items-center lg:items-end w-11/12 lg:w-[49%] text-center gap-8 m-auto'>
                         <div className='flex flex-col gap-8 w-full lg:w-8/12'>
                         <h1 className='font-black text-3xl'>Árkalkulátor</h1>
-                        <p>Add meg a kalkulátrban  a szigetelni kívánt felületek számát, méretét, a szigetelés vastagságát, és a telepítés irányítószámát, mi pedig 1 percen belül küldünk egy indikatív árajánlatot az email címedre.
+                        <p>Add meg a kalkulátrban  a szigetelni kívánt felületek számát, méretét, a szigetelés vastagságát, és a telepítés irányítószámát, mi pedig már mutatjuk is hogy körülbelül mennyibe fog kerülni a szigetelésed, sőt az indikatív árajánlatot az email címedre is elküldjük.
                         </p>
                         <Link href="/kalkulator"><MainCTA>Árat kalkulálok</MainCTA></Link>
                         </div>          
@@ -112,7 +112,7 @@ export default function Lepesek() {
                     <div className='flex flex-col items-center lg:items-start w-11/12 lg:w-[49%] text-center gap-8'>
                     <div className='flex flex-col gap-8 w-full lg:w-8/12'>
                     <h1 className='font-black text-3xl'>Kapcsolatfelvétel</h1>
-                    <p>Az email-ben kapott árajánlat mellé kapsz egy linket amire kattintva (amennyiben elégedett vagy az ajánlattal) visszahívást kérhetsz. Ha így döntesz, és miért ne döntenél így ;) lehetőség szerint még aznap visszahívünk.
+                    <p>Az email-ben kapott árajánlatra válaszolva tudod felvenni velünk a kapcsolatot, sőt akár visszahívást is kérhetsz! Ha így döntesz, és miért ne döntenél így, lehetőség szerint még aznap visszahívünk.
                     </p>
                     </div>          
                     </div>

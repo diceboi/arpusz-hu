@@ -12,7 +12,7 @@ export default function Purhab() {
                 <div className='flex flex-col w-[90vw] lg:w-8/12 py-4 lg:py-8'>
                 <h1 className='text-center m-auto text-6xl lg:text-8xl font-black text-white px-4 tracking-tighter bg-gradient-to-r from-[#06A452] to-[#0DC666] py-2'>Púrhab</h1>
                     <h1 className='text-center m-auto text-4xl lg:text-6xl font-black tracking-tighter py-2'>A legjobb szigetelő</h1>
-                    <p  className='text-center text-xl w-full lg:w-1/2 m-auto py-2'>Miért a púrhab a szigetelőanyagok etalonja? </p>
+                    <p  className='text-center lg:text-lg w-11/12 lg:w-1/2 m-auto py-2 uppercase tracking-widest text-neutral-400 font-bold'>Miért a púrhab a szigetelőanyagok etalonja? </p>
                 </div>
                 <div className='flex flex-col lg:flex-row w-full lg:w-8/12 items-center p-2 lg:py-8'>
 
