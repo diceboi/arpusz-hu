@@ -5,6 +5,7 @@ import { AiFillStar } from 'react-icons/ai'
 import { BiChevronDown } from 'react-icons/bi'
 import SzolgaltatasokHome from '../components/homepage/szolgaltatasok-home'
 import CtaHome from '../components/homepage/cta-home'
+import SecondaryCTA from '../components/secondarycta'
 
 
 export default function Szolgaltatasok() {
@@ -14,7 +15,7 @@ export default function Szolgaltatasok() {
 
       <div className='flex flex-col justify-center items-center w-11/12 lg:w-8/12 py-8'>
         <h1 className='text-center m-auto text-4xl lg:text-6xl font-black tracking-tighter py-2'>Szolgáltatások</h1>
-        <p  className='text-center text-xl w-11/12 lg:w-1/2 m-auto py-2'>Vállalkozásunk szórt púrhab szigeteléssel foglalkozik</p>
+        <p  className='text-center lg:text-lg w-11/12 lg:w-1/2 m-auto py-2 uppercase tracking-widest text-neutral-400 font-bold'>Vállalkozásunk szórt púrhab szigeteléssel foglalkozik</p>
       </div>
 
       <div className='flex justify-center items-center w-full h-auto lg:h-[60vh] bg-neutral-100 py-16 lg:py-8'>
@@ -119,6 +120,8 @@ export default function Szolgaltatasok() {
       <CtaHome/>
 
     </section>
+
+    
     </>
     )
 }
