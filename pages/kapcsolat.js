@@ -1,6 +1,6 @@
 import CtaHome from '../components/homepage/cta-home'
 import { useState, useEffect } from 'react'
-import Recaptcha from '../components/recaptcha';
+import { GoogleReCaptchaProvider } from "react-google-recaptcha-v3";
 
 
 export default function Kapcsolat() {
@@ -38,8 +38,6 @@ export default function Kapcsolat() {
         if (!response.ok) {
             console.log("A küldés sikertelen")
         }
-
-        console.log('Captcha Response:', captchaResponse);
         
     }
 
@@ -57,7 +55,6 @@ export default function Kapcsolat() {
                 <input type='fname' id='fname' placeholder='Keresztnév' className='border border-neutral-200 p-2'/>
                 <input type='email' id='email' placeholder='E-mail cím' className='border border-neutral-200 p-2'/>
                 <textarea placeholder='Üzenet' id='message' rows='10' className='border border-neutral-200 p-2'/>
-                <Recaptcha action="contact" onVerify={handleCaptchaVerify} />
                 <button type='submit' className='px-6 py-3 bg-gradient-to-r from-[#06A452] to-[#0DC666] hover:shadow-[#06a4522f] hover:shadow-xl transition-all text-white text-lg rounded-md cursor-pointer'>Küldés</button>
                 <p className='text-center text-xl m-auto pb-16 pt-12'>Ha árat szeretnél számolni, 3 lépésben könnyedén megteheted felesleges várakozás nélkül.</p>
             </form>          
