@@ -1,21 +1,18 @@
 import CtaHome from '../components/homepage/cta-home'
 import { useState, useEffect } from 'react'
-import { GoogleReCaptchaProvider } from "react-google-recaptcha-v3";
+import { useReCaptcha } from "next-recaptcha-v3";
 
 
 export default function Kapcsolat() {
 
-    //ReCaptcha
-    
-    const [captchaResponse, setCaptchaResponse] = useState(null);
-
-    const handleCaptchaVerify = (response) => {
-        setCaptchaResponse(response);
-    };
-    
+    // Import 'executeRecaptcha' using 'useReCaptcha' hook
+    const { executeRecaptcha } = useReCaptcha();
 
     async function handleSubmit(event) {
-        event.preventDefault();        
+        event.preventDefault();
+
+        // Generate ReCaptcha token
+        const token = await executeRecaptcha("form_submit");
     
         const data = {
             fname: String(event.target.fname.value),
@@ -38,7 +35,7 @@ export default function Kapcsolat() {
         if (!response.ok) {
             console.log("A küldés sikertelen")
         }
-        
+        [executeRecaptcha]
     }
 
     return(
@@ -51,10 +48,10 @@ export default function Kapcsolat() {
                 <p  className='text-center lg:text-lg w-11/12 lg:w-1/2 m-auto py-2 uppercase tracking-widest text-neutral-400 font-bold'>Ha kérdésed van, vagy megbíznál bennünket.</p>
             </div>
             <form onSubmit={handleSubmit} className='flex flex-col gap-4 w-11/12 lg:w-1/3'>
-                <input type='lname' id='lname' placeholder='Vezetéknév' className='border border-neutral-200 p-2'/>
-                <input type='fname' id='fname' placeholder='Keresztnév' className='border border-neutral-200 p-2'/>
-                <input type='email' id='email' placeholder='E-mail cím' className='border border-neutral-200 p-2'/>
-                <textarea placeholder='Üzenet' id='message' rows='10' className='border border-neutral-200 p-2'/>
+                <input type='lname' id='lname' placeholder='Vezetéknév' className='border border-neutral-200 p-2 bg-white'/>
+                <input type='fname' id='fname' placeholder='Keresztnév' className='border border-neutral-200 p-2 bg-white'/>
+                <input type='email' id='email' placeholder='E-mail cím' className='border border-neutral-200 p-2 bg-white'/>
+                <textarea placeholder='Üzenet' id='message' rows='10' className='border border-neutral-200 p-2 bg-white'/>
                 <button type='submit' className='px-6 py-3 bg-gradient-to-r from-[#06A452] to-[#0DC666] hover:shadow-[#06a4522f] hover:shadow-xl transition-all text-white text-lg rounded-md cursor-pointer'>Küldés</button>
                 <p className='text-center text-xl m-auto pb-16 pt-12'>Ha árat szeretnél számolni, 3 lépésben könnyedén megteheted felesleges várakozás nélkül.</p>
             </form>          

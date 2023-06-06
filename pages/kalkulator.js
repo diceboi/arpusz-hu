@@ -177,8 +177,6 @@ return () => {
 };
 }, []);
 
-const [isDisabled, setIsDisabled] = useState(false);
-
 const handleCalc = () => {
   let type = document.querySelector('input[name="status"]:checked').dataset.type;
   let thickness = parseInt(document.getElementById("vastagsag").value);
@@ -202,8 +200,6 @@ const handleCalc = () => {
     console.log("Kérjük, adja meg a szigetelés vastagságát és területét.");
     // Itt jelezheti a felhasználónak, hogy hiányzik a vastagság vagy a terület értéke
   }
-
-  setIsDisabled(true);
 };
 
 //Email küldés

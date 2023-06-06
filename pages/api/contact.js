@@ -1,5 +1,6 @@
 import nodemailer from "nodemailer";
 
+
 export default async function ContactAPI(req, res) {
     const { fname, lname, email, message } = req.body;
     const user = process.env.user;
@@ -23,6 +24,7 @@ export default async function ContactAPI(req, res) {
     });
 
     try {
+
         const mail = await transporter.sendMail({
             from: `${email}`,
             to: "szasz.szabolcs1995@gmail.com",
@@ -59,11 +61,13 @@ export default async function ContactAPI(req, res) {
         });
 
         return res.status(200).json({ message: "siker" });
-        
-    } catch (error) {
-        console.log(error);
-        res.status(500).json({
-            message: "Nem tudtuk elküldeni az emailt."
-        });
+
+        }
+            
+        catch (error) {
+            console.log(error);
+            res.status(500).json({
+                message: "Nem tudtuk elküldeni az emailt."
+            });
+        }
     }
-}

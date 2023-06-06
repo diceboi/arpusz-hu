@@ -87,16 +87,16 @@ export default function Hero() {
                 <div className='flex justify-center w-full h-auto bg-white z-10 border-y border-neutral-300 mt-8'>
                 <div className='flex flex-wrap gap-4 w-full lg:gap-0 lg:w-8/12 py-4 rounded-md'>
                     <div className='grid grid-cols-2 w-full lg:w-1/3 justify-center'>
-                        <div className='flex flex-col justify-between items-center gap-4 lg:border-x border-neutral-300 px-4 text-center'><Image src='/nogaps.svg' width={60} height={60} className='w-10 h-10 lg:w-16 lg:h-16 '></Image><p className='text-xs uppercase tracking-widest'>Résmentes</p></div>
-                        <div className='flex flex-col justify-between items-center gap-4 lg:border-r border-neutral-300 px-4 text-center'><Image src='/insulation_1.svg' width={60} height={60} className='w-10 h-10 lg:w-16 lg:h-16 '></Image><p className='text-xs uppercase tracking-widest'>Kiválóan szigetel</p></div>
+                        <div className='flex flex-col justify-between items-center gap-4 lg:border-x border-neutral-300 px-4 text-center'><Image src='/nogaps.svg' width={60} height={60} className='w-10 h-10 lg:w-12 lg:h-12 '></Image><p className='text-xs uppercase tracking-widest'>Résmentes</p></div>
+                        <div className='flex flex-col justify-between items-center gap-4 lg:border-r border-neutral-300 px-4 text-center'><Image src='/insulation_1.svg' width={60} height={60} className='w-10 h-10 lg:w-12 lg:h-12 '></Image><p className='text-xs uppercase tracking-widest'>Kiválóan szigetel</p></div>
                     </div>
                     <div className='grid grid-cols-2 w-full lg:w-1/3'> 
-                        <div className='flex flex-col justify-between items-center gap-4 lg:border-r border-neutral-300 px-4 text-center'><Image src='/fast.svg' width={60} height={60} className='w-10 h-10 lg:w-16 lg:h-16 '></Image><p className='text-xs uppercase tracking-widest'>Gyors</p></div>           
-                        <div className='flex flex-col justify-between items-center gap-4 lg:border-r border-neutral-300 px-4 text-center'><Image src='/budget_1.svg' width={60} height={60} className='w-10 h-10 lg:w-16 lg:h-16 '></Image><p className='text-xs uppercase tracking-widest'>Pénztárcabarát</p></div>
+                        <div className='flex flex-col justify-between items-center gap-4 lg:border-r border-neutral-300 px-4 text-center'><Image src='/fast.svg' width={60} height={60} className='w-10 h-10 lg:w-12 lg:h-12 '></Image><p className='text-xs uppercase tracking-widest'>Gyors</p></div>           
+                        <div className='flex flex-col justify-between items-center gap-4 lg:border-r border-neutral-300 px-4 text-center'><Image src='/budget_1.svg' width={60} height={60} className='w-10 h-10 lg:w-12 lg:h-12 '></Image><p className='text-xs uppercase tracking-widest'>Pénztárcabarát</p></div>
                     </div>
                     <div className='grid grid-cols-2 w-full lg:w-1/3'>    
-                        <div className='flex flex-col justify-between items-center gap-4 lg:border-r border-neutral-300 px-4 text-center'><Image src='/noharm.svg' width={60} height={60} className='w-10 h-108 lg:w-16 lg:h-16 '></Image><p className='text-xs uppercase tracking-widest'>Környezetbarát</p></div>
-                        <div className='flex flex-col justify-between items-center gap-4 lg:border-r border-neutral-300 px-4 text-center'><Image src='/nofire.svg' width={60} height={60} className='w-10 h-10 lg:w-16 lg:h-16 '></Image><p className='text-xs uppercase tracking-widest'>Biztonságos</p></div>
+                        <div className='flex flex-col justify-between items-center gap-4 lg:border-r border-neutral-300 px-4 text-center'><Image src='/noharm.svg' width={60} height={60} className='w-10 h-108 lg:w-12 lg:h-12 '></Image><p className='text-xs uppercase tracking-widest'>Környezetbarát</p></div>
+                        <div className='flex flex-col justify-between items-center gap-4 lg:border-r border-neutral-300 px-4 text-center'><Image src='/nofire.svg' width={60} height={60} className='w-10 h-10 lg:w-12 lg:h-12 '></Image><p className='text-xs uppercase tracking-widest'>Biztonságos</p></div>
                     </div>
                 </div>
                 </div>
