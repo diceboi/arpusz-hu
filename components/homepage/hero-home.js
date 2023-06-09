@@ -104,8 +104,8 @@ export default function Hero() {
 
                 <div className='hidden lg:block absolute top-0 right-0 bg-[#06A452] w-[500px] h-[500px] rounded-full blur-3xl opacity-10 z-10'></div>
                 <div className='hidden lg:block absolute bottom-0 left-0 bg-[#06A452] w-[500px] h-[500px] rounded-full blur-3xl opacity-10 z-10'></div>
-                <Image src='/kezi-01.png' width={1000} height={1000} className='absolute top-0 right-0 w-8/12 lg:w-3/12 opacity-20'></Image>
-                <Image src='/hab-02.png' width={1000} height={1000} className='absolute bottom-0 left-0 w-10/12 lg:w-5/12 opacity-50'></Image>
+                <Image src='/kezi-01.png' width={500} height={500} className='absolute top-0 right-0 w-8/12 lg:w-3/12 opacity-20'></Image>
+                <Image src='/hab-02.png' width={500} height={500} className='absolute bottom-0 left-0 w-10/12 lg:w-5/12 opacity-50'></Image>
             </section>
         </>
     )
