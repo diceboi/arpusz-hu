@@ -4,7 +4,7 @@ import Velemenyek from '../components/velemenyek'
 import Link from 'next/link'
 import MainCTA from '../components/maincta'
 
-export default function sikeresKalkulacio() {
+export default function SikeresKalkulacio() {
 
     const router = useRouter();
     const { nettoar, bruttoar } = router.query;
