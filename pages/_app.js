@@ -16,8 +16,8 @@ export default function MyApp({ Component, pageProps, className }) {
       <title>Arpusz.hu Púrhab szigetelés</title>
       <link rel="icon" href="/favicon.svg" />       
     </Head>
-    <Script async src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`} />
-      <Script dangerouslySetInnerHTML={{
+    <Script id='google-analytics' async src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`} />
+      <Script id='google-analytics-2' dangerouslySetInnerHTML={{
         __html:`
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
