@@ -15,6 +15,18 @@ export default function MyApp({ Component, pageProps, className }) {
     <Head>
       <title>Arpusz.hu Púrhab szigetelés</title>
       <link rel="icon" href="/favicon.svg" />
+      <Script async src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`} />
+      <Script dangerouslySetInnerHTML={{
+        __html:`
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-9VNLXDHMQ2');
+        `,
+        }} 
+      />
+        
     </Head>
     <MainMenu />    
     <main className={inter.className}>
