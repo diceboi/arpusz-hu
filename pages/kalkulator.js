@@ -14,34 +14,29 @@ const [isOpen1, setIsOpen1] = useState(false);
 const [isFirstStepHighlighted, setIsFirstStepHighlighted] = useState(true);
 const [isSecondStepHighlighted, setIsSecondStepHighlighted] = useState(false);
 const [isThirdStepHighlighted, setIsThirdStepHighlighted] = useState(false);
-const [isFourthStepHighlighted, setIsFourthStepHighlighted] = useState(false);
 
 const firstStep = () => {
   setIsFirstStepHighlighted(true);
   setIsSecondStepHighlighted(false);
   setIsThirdStepHighlighted(false);
-  setIsFourthStepHighlighted(false);
 };
 
 const secondStep = () => {
   setIsFirstStepHighlighted(false);
   setIsSecondStepHighlighted(true);
   setIsThirdStepHighlighted(false);
-  setIsFourthStepHighlighted(false);
 };
 
 const thirdStep = () => {
   setIsFirstStepHighlighted(false);
   setIsSecondStepHighlighted(false);
   setIsThirdStepHighlighted(true);
-  setIsFourthStepHighlighted(false);
 };
 
 const fourthStep = () => {
   setIsFirstStepHighlighted(false);
   setIsSecondStepHighlighted(false);
   setIsThirdStepHighlighted(false);
-  setIsFourthStepHighlighted(true);
 };
 
 //Slider
@@ -204,6 +199,7 @@ const handleCalc = () => {
 
 //Email küldés
 
+const router = useRouter();
 
 async function handleSubmit(event) {
   event.preventDefault();
@@ -242,6 +238,7 @@ async function handleSubmit(event) {
     nettoar: String(nettoarValue),
   }
 
+  const queryParams = `?nettoar=${nettoarValue}&bruttoar=${bruttoarValue}`;
   const response = await fetch("/api/calc", {
     method: "POST",
     headers: {
@@ -251,23 +248,13 @@ async function handleSubmit(event) {
   })
 
   if (response.ok) {
-    console.log("A küldés sikeres")
+    window.location.href = '/sikeres-kalkulacio' + queryParams;
   }
   if (!response.ok) {
     console.log("A küldés sikertelen")
   }
 
 }
-
-//Oldal frissítése (Új kalkuláció)
-const router = useRouter();
-
-  const handleButtonClick = () => {
-    // Frissítsd az oldalt
-    router.reload();
-  };
-
-
 
 //Kalkulátor --------------------------------------------------
 
@@ -298,13 +285,12 @@ const router = useRouter();
           <button onClick={firstStep} style={{background: isFirstStepHighlighted ? '#06A452' : '#e5e5e5', color: isFirstStepHighlighted ? '#fff' : '#000'}} className='flex justify-center items-center  rounded-full w-10 h-10 transition-all'>1.</button>
           <button onClick={secondStep} style={{background: isSecondStepHighlighted ? '#06A452' : '#e5e5e5', color: isSecondStepHighlighted ? '#fff' : '#000'}} className='flex justify-center items-center  rounded-full w-10 h-10 transition-all'>2.</button>
           <button onClick={thirdStep} style={{background: isThirdStepHighlighted ? '#06A452' : '#e5e5e5', color: isThirdStepHighlighted ? '#fff' : '#000'}} className='flex justify-center items-center  rounded-full w-10 h-10 transition-all'>3.</button>
-          <button onClick={fourthStep} style={{background: isFourthStepHighlighted ? '#06A452' : '#e5e5e5', color: isFourthStepHighlighted ? '#fff' : '#000'}} className='flex justify-center items-center  rounded-full w-auto h-10 px-2 transition-all'>Kalkulált ár</button>
         </div>
       
         <div className='w-[360px] lg:w-[1024px] border rounded-xl border-neutral-200 h-auto lg:h-[50vh] my-8 mx-auto shadow-xl overflow-hidden'>
 
             <div style={{
-              marginLeft: isFourthStepHighlighted ? '-3072px' : isThirdStepHighlighted ? '-2048px' : isSecondStepHighlighted ? '-1024px' : isFirstStepHighlighted ? '0px' : '0px',
+              marginLeft: isThirdStepHighlighted ? '-2048px' : isSecondStepHighlighted ? '-1024px' : isFirstStepHighlighted ? '0px' : '0px',
               }} className='flex h-full lg:w-[4096px] transition-all ease-out duration-300'>
 
                 <div className='flex justify-center items-center w-[360px] lg:w-[1024px] mr-[664px] lg:mr-0 py-10'>
@@ -378,7 +364,7 @@ const router = useRouter();
 
                         <div className='flex gap-4 pt-4'>
                           <input type="button" onClick={secondStep} className="py-2 px-4 border border-neutral-200 rounded-md cursor-pointer" value="Vissza" />
-                          <button type='submit' onClick={() => {fourthStep(); handleCalc()}}  className='py-2 px-4 bg-gradient-to-r from-[#06A452] to-[#0DC666] text-white border-transparent rounded-md'>Kérem az árat</button>
+                          <button type='submit' onClick={() => {handleCalc()}}  className='py-2 px-4 bg-gradient-to-r from-[#06A452] to-[#0DC666] text-white border-transparent rounded-md'>Kérem az árat</button>
                         </div>
 
                         <p className='flex flex-col text-center text-sm w-full py-4'>A Kérem az árat gombra kattintva elfogadom az <a href='#' className='text-[#06a452] cursor-pointer'>adatkezelési tájékoztatóban</a> foglaltakat.</p>
@@ -396,9 +382,6 @@ const router = useRouter();
                           </div>
                           <div className='flex gap-2 items-baseline'>
                             <p className='text-sm lg:text-md uppercase'>bruttó</p><h3 id='vatprice' className='text-sm lg:text-xl font-bold'></h3><p>Ft</p>
-                          </div>
-                          <div className='flex gap-2 items-center justify-center'>
-                            <MainCTA><Link href="" onClick={handleButtonClick} className='flex justify-center items-center'><TiArrowSync className=' w-8 h-8'/> Újrakalkulálás</Link></MainCTA>
                           </div>
                           
                         </div>
