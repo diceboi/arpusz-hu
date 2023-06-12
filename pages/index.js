@@ -4,7 +4,7 @@ import { AiFillStar } from 'react-icons/ai'
 import { BiChevronDown } from 'react-icons/bi'
 import { FaRegEnvelope } from 'react-icons/fa'
 import Link from 'next/link'
-import MainCTA from '../components/maincta'
+import Head from 'next/head'
 import SecondaryCTA from '../components/secondarycta'
 import Hero from '../components/homepage/hero-home'
 import Purhab from '../components/homepage/purhab-home'
@@ -19,6 +19,19 @@ import Velemenyek from '../components/velemenyek'
 export default function Home() {
   return (
     <>
+    <Head>
+      <title>Púrhab Szigetelés | Online Árkalkuláció | Arpusz.hu</title>
+        <meta name="description" content="Tetők, Tetőterek, Lapostetők, Lábazatok, Pincék... tökéletes hő, hang és vízszigetelése púrhabbal. Kalkulálj árat online!" key="desc" />
+        <meta property="og:Hő, hang és vízszigetelés púrhabbal | Arpusz.hu" content="Tetők, Tetőterek, Lapostetők, Lábazatok, Pincék... tökéletes hő, hang és vízszigetelése púrhabbal. Kalkulálj árat online!" />
+        <meta
+          property="og:Hő, hang és vízszigetelés púrhabbal | Arpusz.hu"
+          content="Tetők, Tetőterek, Lapostetők, Lábazatok, Pincék... tökéletes hő, hang és vízszigetelése púrhabbal. Kalkulálj árat még ma, online!"
+        />
+        <meta
+          property="og:image"
+          content="/arpusz-logo-header-01.png"
+        />
+    </Head>
     <Hero/>
     <Purhab/>
     <SzolgaltatasokHome/>
