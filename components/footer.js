@@ -27,7 +27,7 @@ export default function Footer(){
                             <Link href="/referenciak" className="uppercase tracking-widest text-sm hover:text-black">Referenciák</Link>
                             <Link href="/purhabrol-bovebben" className="uppercase tracking-widest text-sm hover:text-black">Miért a púrhab?</Link>
                             <Link href="/blog" className="uppercase tracking-widest text-sm hover:text-black">Blog</Link>
-                            <Link href="/kapsolat" className="uppercase tracking-widest text-sm hover:text-black">Kapcsolat</Link>
+                            <Link href="/kapcsolat" className="uppercase tracking-widest text-sm hover:text-black">Kapcsolat</Link>
                             <Link href="/kalkulator" className="uppercase tracking-widest text-sm hover:text-black">Kalkulátor</Link>
                         </ul>
                     </div>
