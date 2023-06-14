@@ -2,11 +2,21 @@ import Image from 'next/image'
 import Link from 'next/link'
 import SecondaryCTA from '../components/secondarycta'
 import CtaHome from '../components/homepage/cta-home'
+import Head from 'next/head'
 
 
 export default function Blog() {
     return(
         <>
+        <Head>
+            <title>Blog - Púrhab Szigetelés - Arpusz.hu</title>
+            <meta name="description" content="Érdekességek, tippek, trükkök hírek és még számtalan izgalmas olvasmány a púrhab, és a hagyományos szigetelések világából." key="desc" />
+            <meta property="og:Blog - Púrhab Szigetelés - Arpusz.hu" content="Érdekességek, tippek, trükkök hírek és még számtalan izgalmas olvasmány a púrhab, és a hagyományos szigetelések világából." />
+            <meta
+            property="og:image"
+            content="/blog-og.jpg"
+            />
+        </Head>
         <section className='flex flex-col justify-center items-center w-full overflow-hidden bg-white py-12'>
                 <div className='flex flex-col w-11/12 lg:w-8/12 py-8'>
                     <h1 className='text-center m-auto text-4xl lg:text-6xl font-black tracking-tighter py-2'>Blog</h1>

@@ -1,6 +1,7 @@
 import CtaHome from '../components/homepage/cta-home'
 import { useState, useEffect } from 'react'
 import { useReCaptcha } from "next-recaptcha-v3";
+import Head from 'next/head';
 
 
 export default function Kapcsolat() {
@@ -40,6 +41,15 @@ export default function Kapcsolat() {
 
     return(
         <>
+        <Head>
+            <title>Kapcsolat - Púrhab Szigetelés - Arpusz.hu</title>
+            <meta name="description" content="Írj nekünk bármilyen púrhab szigeteléssel kapcsolatos kérdésed is lenne. Bízd magad szakértőkre." key="desc" />
+            <meta property="og:Kapcsolat - Púrhab Szigetelés - Arpusz.hu" content="Írj nekünk bármilyen púrhab szigeteléssel kapcsolatos kérdésed is lenne. Bízd magad szakértőkre." />
+            <meta
+            property="og:image"
+            content="/kapcsolat-og.jpg"
+            />
+        </Head>
         <section className='flex flex-col justify-center items-center w-full overflow-hidden bg-white pt-[75px]'>
         <div className='absolute bottom-0 left-0 bg-[#06A452] w-[100px] lg:w-[500px] h-[100px] lg:h-[500px] rounded-full blur-3xl opacity-10 z-10'></div>
         <div className='absolute top-0 right-0 bg-[#06A452] w-[100px] lg:w-[500px] h-[100px] lg:h-[500px] rounded-full blur-3xl opacity-10 z-10'></div>

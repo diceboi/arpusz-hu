@@ -1,11 +1,20 @@
 import CtaHome from '../components/homepage/cta-home'
 import Image from 'next/image'
 import { FaCrown } from 'react-icons/fa'
+import Head from 'next/head'
 
 export default function PurhabrolBovebben() {
     return(
         <>
-        
+        <Head>
+            <title>Miért Szigetelj Púrhabbal? - Arpusz.hu</title>
+            <meta name="description" content="Miben különbözik a púrhab szigetelés hagyományos táblás társaihoz képest, és miért érdemes púrhabbal szigetelni? Itt megtalálod a választ!" key="desc" />
+            <meta property="og:Miért Szigetelj Púrhabbal? - Arpusz.hu" content="Miben különbözik a púrhab szigetelés hagyományos táblás társaihoz képest, és miért érdemes púrhabbal szigetelni? Itt megtalálod a választ!" />
+            <meta
+            property="og:image"
+            content="/miert-a-purhab-og.jpg"
+            />
+        </Head>
         <section className='flex flex-col justify-center items-center w-full overflow-hidden bg-white pb-12 pt-[75px]'>
 
           <div className='flex flex-col w-11/12 lg:w-8/12 py-8'>

@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Head from 'next/head'
 import Link from 'next/link'
 import { Inter } from 'next/font/google'
 import { AiFillStar } from 'react-icons/ai'
@@ -11,6 +12,19 @@ import SecondaryCTA from '../components/secondarycta'
 export default function Szolgaltatasok() {
     return (
     <>
+    <Head>
+      <title>Szolgáltatások - Púrhab Szigetelés - Arpusz.hu</title>
+        <meta name="description" content="Tetők, Tetőterek, Lapostetők, Lábazatok, Pincék... tökéletes hő, hang és vízszigetelése púrhabbal. Kalkulálj árat online!" key="desc" />
+        <meta property="og:Hő, hang és vízszigetelés púrhabbal - Arpusz.hu" content="Tetők, Tetőterek, Lapostetők, Lábazatok, Pincék... tökéletes hő, hang és vízszigetelése púrhabbal. Kalkulálj árat online!" />
+        <meta
+          property="og:Hő, hang és vízszigetelés púrhabbal - Arpusz.hu"
+          content="Tetők, Tetőterek, Lapostetők, Lábazatok, Pincék... tökéletes hő, hang és vízszigetelése púrhabbal. Kalkulálj árat még ma, online!"
+        />
+        <meta
+          property="og:image"
+          content="/arpusz-logo-header-01.png"
+        />
+    </Head>
     <section className='flex flex-col justify-center items-center w-full max-h-fit pb-12 pt-[75px]'>
 
       <div className='flex flex-col justify-center items-center w-11/12 lg:w-8/12 py-8'>

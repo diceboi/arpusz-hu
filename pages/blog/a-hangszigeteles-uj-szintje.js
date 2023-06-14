@@ -2,16 +2,18 @@ import Link from "next/link"
 import CtaHome from "../../components/homepage/cta-home"
 
 export default function Blog4() {
+
     return(
         <>
+        
         <section className="flex flex-col m-auto w-11/12 lg:w-8/12 pt-[75px] gap-8">
             <div className="w-full h-[50vh] bg-[url('/hangszigeteles.jpg')] bg-center bg-cover rounded-b-xl">
             </div>
             <div className="flex flex-col lg:flex-row w-full gap-16 lg:gap-0">
                 <div className="w-full m-auto lg:m-0 lg:w-8/12 lg:pr-8">
                     <article className="flex flex-col gap-4">
-                        <h2 className="text-3xl font-black">Púrhab: A hangszigetelés új szintje</h2>
-                        <p className="font-bold">
+                        <h2 id="blogtitle" className="text-3xl font-black">Púrhab: A hangszigetelés új szintje</h2>
+                        <p id="metadescription" className="font-bold">
                             Ha kényelméről és nyugalmáról van szó, a megfelelő hangszigetelés kiemelt fontossággal bír. A zajos környezet zavarhatja mindennapi tevékenységeinket és befolyásolhatja a pihenésünket. Ha tökéletes csendre vágyunk, a púrhab szigetelés lehet az ideális megoldás. Ebben a cikkben felfedezzük, miért érdemes a púrhab szigetelést választani, és hogy hogyan emelheti a hangszigetelést egy új szintre.
                         </p>
                         <p>

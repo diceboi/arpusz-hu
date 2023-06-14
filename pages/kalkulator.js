@@ -6,6 +6,7 @@ import { TiArrowSync } from 'react-icons/ti'
 import Velemenyek from '../components/velemenyek'
 import Link from 'next/link'
 import MainCTA from '../components/maincta'
+import Head from 'next/head'
 
 export default function Kalkulator() {
 
@@ -260,6 +261,15 @@ async function handleSubmit(event) {
 
     return (
     <>
+    <Head>
+      <title>Púrhab Szigetelés Árkalkulátor - Arpusz.hu</title>
+        <meta name="description" content="Kalkuláld ki púrhab szigetelésed árát, egyszerűen online. Az árajánlatra várakozás kora már a múlté." key="desc" />
+        <meta property="og:Púrhab Szigetelés Árkalkulátor - Arpusz.hu" content="Kalkuláld ki púrhab szigetelésed árát, egyszerűen online. Az árajánlatra várakozás kora már a múlté." />
+        <meta
+          property="og:image"
+          content="/kalkulator-og.jpg"
+        />
+    </Head>
 
     {isOpen1 &&(
         <div className='fixed flex justify-center items-center w-full h-screen bg-[#000000d0] z-[999] transition-all'>

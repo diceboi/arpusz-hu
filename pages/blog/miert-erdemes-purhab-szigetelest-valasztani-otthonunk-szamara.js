@@ -4,6 +4,7 @@ import CtaHome from "../../components/homepage/cta-home"
 export default function Blog1() {
     return(
         <>
+        
         <section className="flex flex-col m-auto w-11/12 lg:w-8/12 pt-[75px] gap-8">
             <div className="w-full h-[50vh] bg-[url('/otthon.jpg')] bg-center bg-cover rounded-b-xl">
             </div>

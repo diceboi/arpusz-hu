@@ -13,7 +13,6 @@ export default function MyApp({ Component, pageProps, className }) {
     <>
     <ReCaptchaProvider reCaptchaKey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}>
     <Head>
-      <title>Arpusz.hu Púrhab szigetelés</title>
       <link rel="icon" href="/favicon.svg" />       
     </Head>
     <Script id='google-analytics' async src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`} />

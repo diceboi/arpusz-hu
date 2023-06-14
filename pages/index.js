@@ -20,11 +20,10 @@ export default function Home() {
   return (
     <>
     <Head>
-      <title>Púrhab Szigetelés | Online Árkalkuláció | Arpusz.hu</title>
-        <meta name="description" content="Tetők, Tetőterek, Lapostetők, Lábazatok, Pincék... tökéletes hő, hang és vízszigetelése púrhabbal. Kalkulálj árat online!" key="desc" />
-        <meta property="og:Hő, hang és vízszigetelés púrhabbal | Arpusz.hu" content="Tetők, Tetőterek, Lapostetők, Lábazatok, Pincék... tökéletes hő, hang és vízszigetelése púrhabbal. Kalkulálj árat online!" />
+      <title>Púrhab Szigetelés - Online Árkalkuláció - Arpusz.hu</title>
+        <meta name="description" content="Lépj át a 21. századba a bizonyítottan legjobb, széles körben is használt púrhab szigeteléssel. Legyen szó tető szigetelésről, aljzat vagy lábazat szigetelésről, a púrhab minden problémára a legjobb orvosság!" key="desc" />
         <meta
-          property="og:Hő, hang és vízszigetelés púrhabbal | Arpusz.hu"
+          property="og:Hő, hang és vízszigetelés púrhabbal - Arpusz.hu"
           content="Tetők, Tetőterek, Lapostetők, Lábazatok, Pincék... tökéletes hő, hang és vízszigetelése púrhabbal. Kalkulálj árat még ma, online!"
         />
         <meta
