@@ -10,14 +10,14 @@ export default function Footer(){
         <footer className="bg-neutral-200 min-h-96 w-full shadow-inner text-neutral-600">
             <div className="flex flex-col lg:flex-row w-11/12 lg:w-8/12 h-full m-auto">
                 <div className="flex flex-col justify-between w-11/12 lg:w-1/3 p-4">
-                    <Link href="/"><Image height={500} width={300} src='/arpusz-logo-header-01.png' className="w-1/2 h-auto "/></Link>
+                    <Link href="/"><Image height={500} width={300} src='/arpusz-logo-header-01.png' alt="logo" className="w-1/2 h-auto "/></Link>
                     <div className="flex flex-col gap-4">
                         <p className="uppercase tracking-widest text-sm">@ 2023 arpusz.hu</p>
                         <p className="uppercase tracking-widest text-xs">Púrhab szigetelés országosan</p>
                     </div>
                 </div>
                 <div className="flex flex-col justify-center w-11/12 lg:w-1/3 p-4">
-                    <Image height={500} width={500} src="/hungary-map.svg" />
+                    <Image height={500} width={500} src="/hungary-map.svg" alt="magyarország-térkép" />
                 </div>
                 <div className="flex flex-col justify-between items-start lg:items-center w-11/12 lg:w-1/3 p-4">
                     <div className="">

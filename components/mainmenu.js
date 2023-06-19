@@ -54,7 +54,7 @@ export default function MainMenu() {
         <nav id="desktop-menu" style={{ height: "75px", backgroundColor: "#ffffff00" }} className="fixed w-full top-0 z-50 backdrop-blur-md border-b border-neutral-200 transition-all" >
             <div className="hidden lg:flex justify-center align-middle items-center h-full">
               <ul className="flex items-center justify-between gap-4 w-8/12">
-                  <Link href="/"><Image src="/arpusz-nav-logo.svg" width={40} height={40}/></Link>                  
+                  <Link href="/"><Image src="/arpusz-nav-logo.svg" alt="logo" width={40} height={40}/></Link>                  
                   <li className="relative group">
                       <Link href="/szolgaltatasok">Szolgáltatások</Link>
                       <span className="absolute inset-x-0 bottom-0 h-[1px] bg-black transition-all duration-200 transform origin-left scale-x-0 group-hover:scale-x-100"></span>
