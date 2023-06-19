@@ -12,7 +12,7 @@ export default function PurhabrolBovebben() {
             <meta property="og:Miért Szigetelj Púrhabbal? - Arpusz.hu" content="Miben különbözik a púrhab szigetelés hagyományos táblás társaihoz képest, és miért érdemes púrhabbal szigetelni? Itt megtalálod a választ!" />
             <meta
             property="og:image"
-            content="/miert-a-purhab-og.jpg"
+            content="/miert-a-purhab-og.webp"
             />
         </Head>
         <section className='flex flex-col justify-center items-center w-full overflow-hidden bg-white pb-12 pt-[75px]'>
@@ -33,7 +33,7 @@ export default function PurhabrolBovebben() {
                   
                   <div className='relative flex w-11/12 lg:w-8/12 bg-white shadow-xl rounded-xl z-[4] ease-in-animation'>
                     <FaCrown className='absolute w-14 h-14 text-[#06A452] -top-11 -left-5 -rotate-12'/>
-                    <div className='w-1/3 p-4'><Image className='rounded-lg' src='/purhab.jpg' alt='púrhab' height={500} width={400}></Image></div>
+                    <div className='w-1/3 p-4'><Image className='rounded-lg' src='/purhab.webp' alt='púrhab' height={500} width={400}></Image></div>
                     <div className='flex flex-col justify-between '>
                       <h2 className='pt-4 uppercase font-bold text-xl'>Zárt cellás púrhab</h2>
                       <div className='py-4'>
@@ -47,7 +47,7 @@ export default function PurhabrolBovebben() {
                   </div>
 
                   <div className='-mt-4 flex w-10/12 lg:w-7/12 bg-white border border-neutral-200 rounded-xl z-[3] blur-[1px] opacity-60 ease-in-animation-1s'>
-                    <div className='w-1/3 p-4'><Image src='/eps.png' alt='eps' height={400} width={400}></Image></div>
+                    <div className='w-1/3 p-4'><Image src='/eps.webp' alt='eps' height={400} width={400}></Image></div>
                     <div className='flex flex-col justify-between '>
                       <h2 className='pt-3 uppercase font-bold text-lg'>Polisztirol (EPS)</h2>
                       <div className='py-3'>
@@ -61,7 +61,7 @@ export default function PurhabrolBovebben() {
                   </div>
 
                   <div className='-mt-4 flex w-9/12 lg:w-6/12 bg-white border border-neutral-200 rounded-xl z-[2] blur-[1px] opacity-40 ease-in-animation-2s'>
-                    <div className='w-1/3 p-4'><Image src='/kozetgyapot.png' alt='kőzetgyapot' height={400} width={400}></Image></div>
+                    <div className='w-1/3 p-4'><Image src='/kozetgyapot.webp' alt='kőzetgyapot' height={400} width={400}></Image></div>
                     <div className='flex flex-col justify-between '>
                       <h2 className='pt-3 uppercase font-bold text-md'>Kőzetgyapot</h2>
                       <div className='py-3'>
@@ -75,7 +75,7 @@ export default function PurhabrolBovebben() {
                   </div>
 
                   <div className='-mt-4 flex w-8/12 lg:w-5/12 bg-white border border-neutral-200 rounded-xl z-[1] blur-[1px] opacity-20 ease-in-animation-3s'>
-                    <div className='w-1/3 p-4'><Image src='/kozetgyapot.png' alt='üveggyapot' height={400} width={400}></Image></div>
+                    <div className='w-1/3 p-4'><Image src='/kozetgyapot.webp' alt='üveggyapot' height={400} width={400}></Image></div>
                     <div className='flex flex-col justify-between '>
                       <h2 className='pt-3 uppercase font-bold text-md'>Üveggyapot</h2>
                       <div className='py-3'>
@@ -205,7 +205,7 @@ export default function PurhabrolBovebben() {
 
               <div className='flex flex-col items-center w-full'>
               
-              <Image height={500} width={500} src="/2tartaly.jpg" alt='két-tartály' className='rounded-xl self-start' />
+              <Image height={500} width={500} src="/2tartaly.webp" alt='két-tartály' className='rounded-xl self-start' />
 
               </div>
 
@@ -257,7 +257,7 @@ export default function PurhabrolBovebben() {
 
               <div className='flex flex-col items-center w-full'>
               
-              <Image height={500} width={500} src="/nyitott-cella-1.jpg" alt='nyitott-cella' className='rounded-xl self-start' />
+              <Image height={500} width={500} src="/nyitott-cella-1.webp" alt='nyitott-cella' className='rounded-xl self-start' />
               </div>
 
               </div>

@@ -5,7 +5,7 @@ export default function Blog2() {
     return(
         <>
         <section className="flex flex-col m-auto w-11/12 lg:w-8/12 pt-[75px] gap-8">
-            <div className="w-full h-[50vh] bg-[url('/mennyibe-kerul.jpg')] bg-center bg-cover rounded-b-xl">
+            <div className="w-full h-[50vh] bg-[url('/mennyibe-kerul.webp')] bg-center bg-cover rounded-b-xl">
             </div>
             <div className="flex flex-col lg:flex-row w-full gap-16 lg:gap-0">
                 <div className="w-full m-auto lg:m-0 lg:w-8/12 lg:pr-8">
@@ -41,13 +41,13 @@ export default function Blog2() {
                         <div>
                             <h3 className="text-xl font-bold">További cikkek:</h3>
                         </div>
-                        <Link href="/blog/miert-erdemes-purhab-szigetelest-valasztani-otthonunk-szamara" className="flex w-full items-end p-2 h-[200px] border border-neutral-300 rounded-xl bg-[url('/otthon.jpg')] bg-cover bg-center hover:border-black transition-all">
+                        <Link href="/blog/miert-erdemes-purhab-szigetelest-valasztani-otthonunk-szamara" className="flex w-full items-end p-2 h-[200px] border border-neutral-300 rounded-xl bg-[url('/otthon.webp')] bg-cover bg-center hover:border-black transition-all">
                             <h3 className="text-white text-bold text-lg p-2 rounded-md bg-[#06a452] backdrop-blur-sm bg-opacity-70">Miért érdemes púrhab szigetelést választani otthonunk számára?</h3>
                         </Link>
-                        <Link href="/blog/a-kornyezetbarat-valasztas" className="flex w-full items-end p-2 h-[200px] border border-neutral-300 rounded-xl bg-[url('/kornyezetbarat.jpg')] bg-cover bg-center hover:border-black transition-all">
+                        <Link href="/blog/a-kornyezetbarat-valasztas" className="flex w-full items-end p-2 h-[200px] border border-neutral-300 rounded-xl bg-[url('/kornyezetbarat.webp')] bg-cover bg-center hover:border-black transition-all">
                             <h3 className="text-white text-bold text-lg p-2 rounded-md bg-[#06a452] backdrop-blur-sm bg-opacity-70">A környezetbarát választás</h3>
                         </Link>
-                        <Link href="/blog/a-hangszigeteles-uj-szintje" className="flex w-full items-end p-2 h-[200px] border border-neutral-300 rounded-xl bg-[url('/hangszigeteles.jpg')] bg-cover bg-center hover:border-black transition-all">
+                        <Link href="/blog/a-hangszigeteles-uj-szintje" className="flex w-full items-end p-2 h-[200px] border border-neutral-300 rounded-xl bg-[url('/hangszigeteles.webp')] bg-cover bg-center hover:border-black transition-all">
                             <h3 className="text-white text-bold text-lg p-2 rounded-md bg-[#06a452] backdrop-blur-sm bg-opacity-70">A hangszigetelés új szintje</h3>
                         </Link>
 

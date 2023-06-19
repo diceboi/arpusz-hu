@@ -12,7 +12,7 @@ export default function Referenciak() {
             <meta property="og:Referenciák - Púrhab Szigetelés - Arpusz.hu" content="Tekintsd meg púrhab szigetelési munkáinkat, és győződj meg róla te magad, hogy nem kell tovább keresned a megfelelő csapatot." />
             <meta
             property="og:image"
-            content="/referenciak-og.jpg"
+            content="/referenciak-og.webp"
             />
         </Head>
         <ReferenciakPage/>

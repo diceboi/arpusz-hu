@@ -192,7 +192,7 @@ export default function Lepesek() {
                     <div className='flex flex-col items-center lg:items-start w-11/12 lg:w-[49%] pb-24 lg:py-12 '>
                     
                     <div className='flex w-11/12 lg:w-8/12'>
-                        <Image width={700} height={500} alt='telefonos-egyeztetés' src='/telefonos-egyeztetes.png'/>
+                        <Image width={700} height={500} alt='telefonos-egyeztetés' src='/telefonos-egyeztetes.webp'/>
                     </div>
 
                     </div>
@@ -224,7 +224,7 @@ export default function Lepesek() {
                     <div className='flex flex-col items-center lg:items-end w-11/12 lg:w-[49%] pb-24 lg:py-12 '>
                     
                     <div className='flex w-11/12 lg:w-8/12'>
-                        <Image width={700} height={500} alt='munka' src='/munkavegzes.png' />
+                        <Image width={700} height={500} alt='munka' src='/munkavegzes.webp' />
                     </div>
 
                     </div>

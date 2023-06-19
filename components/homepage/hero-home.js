@@ -9,7 +9,7 @@ export default function Hero() {
             <section className='relative flex flex-col w-full overflow-hidden m-auto pt-[100px] lg:pt-[75px] h-auto lg:h-screen bg-neutral-100'>
                 <div className='flex flex-col justify-evenly w-1/3 place-self-center m-auto min-w-full lg:min-w-[650px] z-10'>
                     <div className='flex flex-col m-auto w-11/12 lg:w-full'>
-                    <Image src='/arpusz-logo-header-01.png' alt='arpusz-logo' width={500} height={200} className='w-52 lg:w-1/2 self-center -mb-8'></Image>
+                    <Image src='/arpusz-logo-header-01.webp' alt='arpusz-logo' width={500} height={200} className='w-52 lg:w-1/2 self-center -mb-8'></Image>
                     <div className='flex justify-between h-10 overflow-hidden'>
                         <div className='line'></div>
                         <div className='line'></div>
@@ -104,8 +104,8 @@ export default function Hero() {
 
                 <div className='hidden lg:block absolute top-0 right-0 bg-[#06A452] w-[500px] h-[500px] rounded-full blur-3xl opacity-10 z-10'></div>
                 <div className='hidden lg:block absolute bottom-0 left-0 bg-[#06A452] w-[500px] h-[500px] rounded-full blur-3xl opacity-10 z-10'></div>
-                <Image src='/kezi-01.png' alt='szigetelő-pisztoly' width={500} height={500} className='absolute top-0 right-0 w-8/12 lg:w-3/12 opacity-20'></Image>
-                <Image src='/hab-02.png' alt='púrhab' width={500} height={500} className='absolute bottom-0 left-0 w-10/12 lg:w-5/12 opacity-50'></Image>
+                <Image src='/kezi-01.webp' alt='szigetelő-pisztoly' width={500} height={500} className='absolute top-0 right-0 w-8/12 lg:w-3/12 opacity-20'></Image>
+                <Image src='/hab-02.webp' alt='púrhab' width={500} height={500} className='absolute bottom-0 left-0 w-10/12 lg:w-5/12 opacity-50'></Image>
             </section>
         </>
     )

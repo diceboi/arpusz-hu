@@ -28,7 +28,7 @@ export default function Home() {
         />
         <meta
           property="og:image"
-          content="/arpusz-logo-header-01.png"
+          content="/arpusz-logo-header-01.webp"
         />
     </Head>
     <Hero/>

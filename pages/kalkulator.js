@@ -267,7 +267,7 @@ async function handleSubmit(event) {
         <meta property="og:Púrhab Szigetelés Árkalkulátor - Arpusz.hu" content="Kalkuláld ki púrhab szigetelésed árát, egyszerűen online. Az árajánlatra várakozás kora már a múlté." />
         <meta
           property="og:image"
-          content="/kalkulator-og.jpg"
+          content="/kalkulator-og.webp"
         />
     </Head>
 

@@ -47,7 +47,7 @@ export default function Kapcsolat() {
             <meta property="og:Kapcsolat - Púrhab Szigetelés - Arpusz.hu" content="Írj nekünk bármilyen púrhab szigeteléssel kapcsolatos kérdésed is lenne. Bízd magad szakértőkre." />
             <meta
             property="og:image"
-            content="/kapcsolat-og.jpg"
+            content="/kapcsolat-og.webp"
             />
         </Head>
         <section className='flex flex-col justify-center items-center w-full overflow-hidden bg-white pt-[75px]'>

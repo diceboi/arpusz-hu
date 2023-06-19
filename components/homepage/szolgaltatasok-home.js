@@ -16,7 +16,7 @@ export default function SzolgaltatasokHome() {
 
                 <div className=' grid grid-cols-1 lg:grid-cols-3 lg:grid-rows-4 gap-4 w-11/12 lg:w-8/12 m-auto items-center py-8 '>
 
-                    <div style={{backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/csaladi-haz.jpg")`}} className='base-tile relative overflow-hidden col-span-2 lg:col-span-1 flex items-center justify-center rounded-xl min-h-[250px] bg-cover hover:shadow-xl'>
+                    <div style={{backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/csaladi-haz.webp")`}} className='base-tile relative overflow-hidden col-span-2 lg:col-span-1 flex items-center justify-center rounded-xl min-h-[250px] bg-cover hover:shadow-xl'>
                         <div className='p-4'><Image className='' alt='családi-ház' src='/csaladi-haz-white-icon.svg' height={60} width={60}></Image></div>
 
                         <div className='inner-tile absolute flex flex-col gap-4 p-4 items-center justify-center bg-white w-full h-full top-full'>
@@ -26,7 +26,7 @@ export default function SzolgaltatasokHome() {
                         
                     </div>
 
-                    <div style={{backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/panelhaz.jpg")`}} className='base-tile relative overflow-hidden col-span-2 lg:col-span-1 flex items-center justify-center rounded-xl min-h-[250px] bg-cover hover:shadow-xl'>
+                    <div style={{backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/panelhaz.webp")`}} className='base-tile relative overflow-hidden col-span-2 lg:col-span-1 flex items-center justify-center rounded-xl min-h-[250px] bg-cover hover:shadow-xl'>
                         <div className='p-4'><Image className='' alt='panelház' src='/panelhaz-white-icon.svg' height={50} width={50}></Image></div>
 
                         <div className='inner-tile absolute flex flex-col gap-4 p-4 items-center justify-center bg-white w-full h-full top-full'>
@@ -37,7 +37,7 @@ export default function SzolgaltatasokHome() {
                     </div>
 
 
-                    <div style={{backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/uzem.jpg")`}} className='base-tile relative overflow-hidden col-span-2 row-span-1 lg:col-span-1 lg:row-span-2 flex items-center justify-center rounded-xl h-full min-h-[250px] bg-cover hover:shadow-xl ease-in'>
+                    <div style={{backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/uzem.webp")`}} className='base-tile relative overflow-hidden col-span-2 row-span-1 lg:col-span-1 lg:row-span-2 flex items-center justify-center rounded-xl h-full min-h-[250px] bg-cover hover:shadow-xl ease-in'>
                         <div className='p-4'><Image className='' alt='üzem' src='/uzem-white-icon.svg' height={70} width={70}></Image></div>
 
                         <div className='inner-tile absolute flex flex-col gap-4 p-4 items-center justify-center bg-white w-full h-full top-full'>
@@ -48,7 +48,7 @@ export default function SzolgaltatasokHome() {
                         
                     </div>
 
-                    <div style={{backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/csarnok.jpg")`}} className='base-tile relative overflow-hidden col-span-2 row-span-1 lg:col-span-1 lg:row-span-2 flex items-center justify-center rounded-xl h-full min-h-[250px]  bg-cover hover:shadow-xl ease-in'>
+                    <div style={{backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/csarnok.webp")`}} className='base-tile relative overflow-hidden col-span-2 row-span-1 lg:col-span-1 lg:row-span-2 flex items-center justify-center rounded-xl h-full min-h-[250px]  bg-cover hover:shadow-xl ease-in'>
                         <div className='p-4'><Image className='' alt='csarnok' src='/csarnok-white-icon.svg' height={70} width={70}></Image></div>
 
                         <div className='inner-tile absolute flex flex-col gap-4 p-4 items-center justify-center bg-white w-full h-full top-full'>
@@ -59,7 +59,7 @@ export default function SzolgaltatasokHome() {
                         
                     </div>
 
-                    <div style={{backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/gazdasagi.jpg")`}} className='base-tile relative overflow-hidden col-span-2 lg:col-span-1 flex items-center justify-center rounded-xl h-full min-h-[250px]  bg-cover hover:shadow-xl ease-in'>
+                    <div style={{backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/gazdasagi.webp")`}} className='base-tile relative overflow-hidden col-span-2 lg:col-span-1 flex items-center justify-center rounded-xl h-full min-h-[250px]  bg-cover hover:shadow-xl ease-in'>
                         <div className='p-4'><Image className='' alt='gazdasági-épület' src='/gazdasagi-white-icon.svg' height={80} width={80}></Image></div>
 
                         <div className='inner-tile absolute flex flex-col gap-4 p-4 items-center justify-center bg-white w-full h-full top-full'>
@@ -70,7 +70,7 @@ export default function SzolgaltatasokHome() {
                         
                     </div>
 
-                    <div style={{backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/tartalyok.jpg")`}} className='base-tile relative overflow-hidden col-span-2 lg:col-span-2 flex items-center justify-center rounded-xl h-full min-h-[250px]  bg-cover hover:shadow-xl'>
+                    <div style={{backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/tartalyok.webp")`}} className='base-tile relative overflow-hidden col-span-2 lg:col-span-2 flex items-center justify-center rounded-xl h-full min-h-[250px]  bg-cover hover:shadow-xl'>
                         <div className='p-4'><Image className='' alt='tartályok' src='/tartalyok-white-icon.svg' height={50} width={50}></Image></div>
 
                         <div className='inner-tile absolute flex flex-col gap-4 p-4 items-center justify-center bg-white w-full h-full top-full'>
@@ -81,7 +81,7 @@ export default function SzolgaltatasokHome() {
                         
                     </div>
 
-                    <div style={{backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/hutoipar.jpg")`}} className='base-tile relative overflow-hidden col-span-2 lg:col-span-1 flex items-center justify-center rounded-xl h-full min-h-[250px]  bg-cover hover:shadow-xl'>
+                    <div style={{backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/hutoipar.webp")`}} className='base-tile relative overflow-hidden col-span-2 lg:col-span-1 flex items-center justify-center rounded-xl h-full min-h-[250px]  bg-cover hover:shadow-xl'>
                         <div className='p-4'><Image className='' alt='hűtőipar' src='/hutoipar-white-icon.svg' height={50} width={50}></Image></div>
 
                         <div className='inner-tile absolute flex flex-col gap-4 p-4 items-center justify-center bg-white w-full h-full top-full'>
@@ -92,7 +92,7 @@ export default function SzolgaltatasokHome() {
                         
                     </div>
 
-                    <div style={{backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/csorendszer.jpg")`}} className='base-tile relative overflow-hidden col-span-2 lg:col-span-1 flex items-center justify-center rounded-xl h-full min-h-[250px]  bg-cover hover:shadow-xl'>
+                    <div style={{backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/csorendszer.webp")`}} className='base-tile relative overflow-hidden col-span-2 lg:col-span-1 flex items-center justify-center rounded-xl h-full min-h-[250px]  bg-cover hover:shadow-xl'>
                         <div className='p-4'><Image className='' alt='csőrendszer' src='/csorendszer-white-icon.svg' height={60} width={60}></Image></div>
 
                         <div className='inner-tile absolute flex flex-col gap-4 p-4 items-center justify-center bg-white w-full h-full top-full'>
@@ -103,7 +103,7 @@ export default function SzolgaltatasokHome() {
                         
                     </div>
 
-                    <div style={{backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/mobilgarazs.jpg")`}} className='base-tile relative overflow-hidden col-span-2 lg:col-span-1 flex items-center justify-center rounded-xl h-full min-h-[250px]  bg-cover hover:shadow-xl'>
+                    <div style={{backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/mobilgarazs.webp")`}} className='base-tile relative overflow-hidden col-span-2 lg:col-span-1 flex items-center justify-center rounded-xl h-full min-h-[250px]  bg-cover hover:shadow-xl'>
                         <div className='p-4'><Image className='' alt='garázs' src='/garazs-white-icon.svg' height={80} width={80}></Image></div>
 
                         <div className='inner-tile absolute flex flex-col gap-4 p-4 items-center justify-center bg-white w-full h-full top-full'>
@@ -114,7 +114,7 @@ export default function SzolgaltatasokHome() {
                         
                     </div>
 
-                    <div style={{backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/pince.jpg")`}} className='base-tile relative overflow-hidden col-span-2 lg:col-span-1 flex items-center justify-center rounded-xl h-full min-h-[250px]  bg-cover hover:shadow-xl'>
+                    <div style={{backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/pince.webp")`}} className='base-tile relative overflow-hidden col-span-2 lg:col-span-1 flex items-center justify-center rounded-xl h-full min-h-[250px]  bg-cover hover:shadow-xl'>
                         <div className='p-4'><Image className='' alt='pince' src='/pincek-white-icon.svg' height={80} width={80}></Image></div>
 
                         <div className='inner-tile absolute flex flex-col gap-4 p-4 items-center justify-center bg-white w-full h-full top-full'>
@@ -127,7 +127,7 @@ export default function SzolgaltatasokHome() {
 
                     <Link className='col-span-2' href="/kalkulator">
                     <div className='flex items-start flex-col p-4 bg-gradient-to-r from-[#06A452] to-[#8AECB9] base-tile relative overflow-hidden  rounded-xl h-full min-h-[250px] hover:shadow-xl'>
-                        <Image className='absolute right-5 bottom-0 w-[130px] lg:w-[150px]' src='/hand-1.png' alt='púrhab-kalkulátor' height={200} width={200}></Image>
+                        <Image className='absolute right-5 bottom-0 w-[130px] lg:w-[150px]' src='/hand-1.webp' alt='púrhab-kalkulátor' height={200} width={200}></Image>
                         <h2 className='text-4xl text-white font-normal z-[1]'>Számold ki</h2>
                         <h1 className='text-5xl text-white font-black z-[1]'>3 lépésben</h1>
                         <p className='text-lg text-white font-normal z-[1] w-1/2'>a te igényeidnek megfelelő púrhab szigetelést kalkulátorunkkal!</p>

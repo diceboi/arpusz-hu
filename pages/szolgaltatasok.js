@@ -22,7 +22,7 @@ export default function Szolgaltatasok() {
         />
         <meta
           property="og:image"
-          content="/arpusz-logo-header-01.png"
+          content="/arpusz-logo-header-01.webp"
         />
     </Head>
     <section className='flex flex-col justify-center items-center w-full max-h-fit pb-12 pt-[75px]'>
@@ -34,7 +34,7 @@ export default function Szolgaltatasok() {
 
       <div className='flex justify-center items-center w-full h-auto lg:h-[60vh] bg-neutral-100 py-16 lg:py-8'>
         <div className='flex flex-col gap-8 lg:flex-row justify-center items-center w-11/12 lg:w-8/12'>
-          <div className="lg:w-1/2 w-full h-[200px] lg:h-[400px] rounded-xl bg-[url('/csaladi-haz.jpg')] bg-cover bg-center"></div>
+          <div className="lg:w-1/2 w-full h-[200px] lg:h-[400px] rounded-xl bg-[url('/csaladi-haz.webp')] bg-cover bg-center"></div>
           <div className='flex flex-col gap-4 lg:w-1/2 w-full justify-center items-start'>
             <Image src='/csaladi-haz-icon.svg' alt='családi-ház' height={50} width={50}></Image>
             <h2 className='text-3xl font-black'>Családi házak szigetelése</h2>
@@ -45,7 +45,7 @@ export default function Szolgaltatasok() {
 
       <div className='flex justify-center items-center w-full h-auto lg:h-[60vh] bg-white py-16 lg:py-8'>
         <div className='flex flex-col gap-8 lg:flex-row-reverse justify-center items-center w-11/12 lg:w-8/12'>
-          <div className="lg:w-1/2 w-full h-[200px] lg:h-[400px] rounded-xl bg-[url('/panelhaz.jpg')] bg-cover bg-center"></div>
+          <div className="lg:w-1/2 w-full h-[200px] lg:h-[400px] rounded-xl bg-[url('/panelhaz.webp')] bg-cover bg-center"></div>
           <div className='flex flex-col gap-4 lg:w-1/2 w-full justify-center items-start'>
             <Image src='/panelhaz-icon.svg' alt='panelház' height={50} width={50}></Image>
             <h2 className='text-3xl font-black'>Panelházak szigetelése</h2>
@@ -56,7 +56,7 @@ export default function Szolgaltatasok() {
 
       <div className='flex justify-center items-center w-full h-auto lg:h-[60vh] bg-neutral-100 py-16 lg:py-8'>
         <div className='flex flex-col gap-8 lg:flex-row justify-center items-center w-11/12 lg:w-8/12'>
-          <div className="lg:w-1/2 w-full h-[200px] lg:h-[400px] rounded-xl bg-[url('/uzem.jpg')] bg-cover bg-center"></div>
+          <div className="lg:w-1/2 w-full h-[200px] lg:h-[400px] rounded-xl bg-[url('/uzem.webp')] bg-cover bg-center"></div>
           <div className='flex flex-col gap-4 lg:w-1/2 w-full justify-center items-start'>
             <Image src='/uzem-icon.svg' alt='üzem' height={50} width={50}></Image>
             <h2 className='text-3xl font-black'>Üzemek szigetelése</h2>
@@ -67,7 +67,7 @@ export default function Szolgaltatasok() {
 
       <div className='flex justify-center items-center w-full h-auto lg:h-[60vh] bg-white py-16 lg:py-8'>
         <div className='flex flex-col gap-8 lg:flex-row-reverse justify-center items-center w-11/12 lg:w-8/12'>
-          <div className="lg:w-1/2 w-full h-[200px] lg:h-[400px] rounded-xl bg-[url('/csarnok.jpg')] bg-cover bg-center"></div>
+          <div className="lg:w-1/2 w-full h-[200px] lg:h-[400px] rounded-xl bg-[url('/csarnok.webp')] bg-cover bg-center"></div>
           <div className='flex flex-col gap-4 lg:w-1/2 w-full justify-center items-start'>
             <Image src='/csarnok-icon.svg' alt='csarnok' height={50} width={50}></Image>
             <h2 className='text-3xl font-black'>Csarnokok szigetelése</h2>
@@ -78,7 +78,7 @@ export default function Szolgaltatasok() {
 
       <div className='flex justify-center items-center w-full h-auto lg:h-[60vh] bg-neutral-100 py-16 lg:py-8'>
         <div className='flex flex-col gap-8 lg:flex-row justify-center items-center w-11/12 lg:w-8/12'>
-          <div className="lg:w-1/2 w-full h-[200px] lg:h-[400px] rounded-xl bg-[url('/tartalyok.jpg')] bg-cover bg-center"></div>
+          <div className="lg:w-1/2 w-full h-[200px] lg:h-[400px] rounded-xl bg-[url('/tartalyok.webp')] bg-cover bg-center"></div>
           <div className='flex flex-col gap-4 lg:w-1/2 w-full justify-center items-start'>
             <Image src='/tartalyok-icon.svg' alt='tartályok' height={50} width={50}></Image>
             <h2 className='text-3xl font-black'>Tartályok szigetelése</h2>
@@ -89,7 +89,7 @@ export default function Szolgaltatasok() {
 
       <div className='flex justify-center items-center w-full h-auto lg:h-[60vh] bg-white py-16 lg:py-8'>
         <div className='flex flex-col gap-8 lg:flex-row-reverse justify-center items-center w-11/12 lg:w-8/12'>
-          <div className="lg:w-1/2 w-full h-[200px] lg:h-[400px] rounded-xl bg-[url('/hutoipar.jpg')] bg-cover bg-center"></div>
+          <div className="lg:w-1/2 w-full h-[200px] lg:h-[400px] rounded-xl bg-[url('/hutoipar.webp')] bg-cover bg-center"></div>
           <div className='flex flex-col gap-4 lg:w-1/2 w-full justify-center items-start'>
             <Image src='/hutoipar-icon.svg' alt='hűtőipar' height={50} width={50}></Image>
             <h2 className='text-3xl font-black'>Hűtőipar</h2>
@@ -100,7 +100,7 @@ export default function Szolgaltatasok() {
 
       <div className='flex justify-center items-center w-full h-auto lg:h-[60vh] bg-neutral-100 py-16 lg:py-8'>
         <div className='flex flex-col gap-8 lg:flex-row justify-center items-center w-11/12 lg:w-8/12'>
-          <div className="lg:w-1/2 w-full h-[200px] lg:h-[400px] rounded-xl bg-[url('/csorendszer.jpg')] bg-cover bg-center"></div>
+          <div className="lg:w-1/2 w-full h-[200px] lg:h-[400px] rounded-xl bg-[url('/csorendszer.webp')] bg-cover bg-center"></div>
           <div className='flex flex-col gap-4 lg:w-1/2 w-full justify-center items-start'>
             <Image src='/csorendszer-icon.svg' alt='csőrendszer' height={50} width={50}></Image>
             <h2 className='text-3xl font-black'>Csőszigetelés</h2>
@@ -111,7 +111,7 @@ export default function Szolgaltatasok() {
 
       <div className='flex justify-center items-center w-full h-auto lg:h-[60vh] bg-white py-16 lg:py-8'>
         <div className='flex flex-col gap-8 lg:flex-row-reverse justify-center items-center w-11/12 lg:w-8/12'>
-          <div className="lg:w-1/2 w-full h-[200px] lg:h-[400px] rounded-xl bg-[url('/mobilgarazs.jpg')] bg-cover bg-center"></div>
+          <div className="lg:w-1/2 w-full h-[200px] lg:h-[400px] rounded-xl bg-[url('/mobilgarazs.webp')] bg-cover bg-center"></div>
           <div className='flex flex-col gap-4 lg:w-1/2 w-full justify-center items-start'>
             <Image src='/garazs-icon.svg' alt='garázs' height={50} width={50}></Image>
             <h2 className='text-3xl font-black'>Mobilgarázsok szigetelése</h2>
@@ -122,7 +122,7 @@ export default function Szolgaltatasok() {
 
       <div className='flex justify-center items-center w-full h-auto lg:h-[60vh] bg-neutral-100 py-16 lg:py-8'>
         <div className='flex flex-col gap-8 lg:flex-row justify-center items-center w-11/12 lg:w-8/12'>
-          <div className="lg:w-1/2 w-full h-[200px] lg:h-[400px] rounded-xl bg-[url('/pince.jpg')] bg-cover bg-center"></div>
+          <div className="lg:w-1/2 w-full h-[200px] lg:h-[400px] rounded-xl bg-[url('/pince.webp')] bg-cover bg-center"></div>
           <div className='flex flex-col gap-4 lg:w-1/2 w-full justify-center items-start'>
             <Image src='/pince-icon.svg' alt='pince' height={50} width={50}></Image>
             <h2 className='text-3xl font-black'>Pincék szigetelése</h2>
