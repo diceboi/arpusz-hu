@@ -361,8 +361,9 @@ async function handleSubmit(event) {
 
                               <div className='flex flex-col lg:flex-row gap-4 w-full py-4'>
 
-                                <input type='text' required id='irszam' className='bg-neutral-200 rounded-sm  p-2 w-full' placeholder='Irányítószám'/>
-                                <input type='email' required id='email' className='bg-neutral-200 rounded-sm  p-2 w-full' placeholder='E-mail cím'/>
+                                <input type='text' required id='irszam' className='bg-neutral-200 rounded-sm  p-2 w-full' placeholder='Irányítószám*'/>
+                                <input type='email' required id='email' className='bg-neutral-200 rounded-sm  p-2 w-full' placeholder='E-mail cím*'/>
+                                <input type='tel' id='phone' className='bg-neutral-200 rounded-sm  p-2 w-full' placeholder='Telefonszám'/>
 
                               </div>
 

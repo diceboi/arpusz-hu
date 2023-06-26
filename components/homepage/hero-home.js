@@ -77,7 +77,7 @@ export default function Hero() {
                         <div className='line2'></div>
                     </div>
                     </div> 
-                    <h3 className='p-2 lg:p-4 m-4 text-center text-lg font-medium leading-7'>A Púrhab szigetelés az egyik leghatékonyabb módja módja annak, hogy javítsd otthonod kényelmét és csökkentsd az energiaszámlád. <span className='text-[#06a452]'>Próbáld ki most, és élvezd az azonnali kényelmet és megtakarítást!</span></h3>
+                    <p className='p-2 lg:p-4 m-4 text-center text-lg font-medium leading-7'>A Púrhab szigetelés az egyik leghatékonyabb módja módja annak, hogy javítsd otthonod kényelmét és csökkentsd az energiaszámlád. <span className='text-[#06a452]'>Próbáld ki most, és élvezd az azonnali kényelmet és megtakarítást!</span></p>
                     <div className='flex items-center justify-center gap-4 pt-4'>
                     <Link href="/kalkulator"><MainCTA>Árat kalkulálok</MainCTA></Link>
                     <Link href="/purhabrol-bovebben"><SecondaryCTA>Miért a púrhab?</SecondaryCTA></Link>

@@ -19,19 +19,9 @@ export default function Footer(){
                 <div className="flex flex-col justify-center w-11/12 lg:w-1/3 p-4">
                     <Image height={500} width={500} src="/hungary-map.svg" alt="magyarország-térkép" />
                 </div>
-                <div className="flex flex-col justify-between items-start lg:items-center w-11/12 lg:w-1/3 p-4">
-                    <div className="">
-                        <ul className="flex flex-col gap-2">
-                            <Link href="/rolunk" className="uppercase tracking-widest text-sm hover:text-black">Rólunk</Link>
-                            <Link href="/szolgaltatasok" className="uppercase tracking-widest text-sm hover:text-black">Szolgáltatások</Link>
-                            <Link href="/referenciak" className="uppercase tracking-widest text-sm hover:text-black">Referenciák</Link>
-                            <Link href="/purhabrol-bovebben" className="uppercase tracking-widest text-sm hover:text-black">Miért a púrhab?</Link>
-                            <Link href="/blog" className="uppercase tracking-widest text-sm hover:text-black">Blog</Link>
-                            <Link href="/kapcsolat" className="uppercase tracking-widest text-sm hover:text-black">Kapcsolat</Link>
-                            <Link href="/kalkulator" className="uppercase tracking-widest text-sm hover:text-black">Kalkulátor</Link>
-                        </ul>
-                    </div>
-                    <div className="border-t lg:border border-neutral-300 lg:rounded-xl lg:self-end mt-4 lg:mt-0 py-4 lg:p-4">
+                <div className="flex flex-col justify-center items-start lg:items-center w-11/12 lg:w-1/3 p-4">
+                    
+                    <div className="flex flex-col gap-4 border-t lg:border border-neutral-300 lg:rounded-xl lg:self-end mt-4 lg:mt-0 py-4 lg:p-4">
                         <h1>Elérhetőség:</h1>
                         <Link href="tel:+36305236866"><p className="flex items-center gap-2"><AiFillPhone className="text-[#06a452]" />+36 30 523 6866</p></Link>
                         <Link href="tel:+36300103001"><p className="flex items-center gap-2"><AiFillPhone className="text-[#06a452]" />+36 30 010 3001</p></Link>
