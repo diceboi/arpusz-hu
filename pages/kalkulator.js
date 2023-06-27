@@ -237,6 +237,7 @@ async function handleSubmit(event) {
     email: String(event.target.email.value),
     bruttoar: String(bruttoarValue),
     nettoar: String(nettoarValue),
+    telefon: String(event.target.phone.value)
   }
 
   const queryParams = `?nettoar=${nettoarValue}&bruttoar=${bruttoarValue}`;
@@ -357,13 +358,14 @@ async function handleSubmit(event) {
 
                             <div className='flex flex-col items-center gap-4 w-8/12 lg:w-1/2'>
 
-                              <p>Kérjük add meg az email címed és az irányítószámod:</p>
+                              <p>Kérjük add meg az alábbi adatokat:</p>
+                              <p className='text-xs'>A csillaggal(*) jelölt mezők kitöltése kötelező</p>
 
                               <div className='flex flex-col lg:flex-row gap-4 w-full py-4'>
 
-                                <input type='text' required id='irszam' className='bg-neutral-200 rounded-sm  p-2 w-full' placeholder='Irányítószám*'/>
-                                <input type='email' required id='email' className='bg-neutral-200 rounded-sm  p-2 w-full' placeholder='E-mail cím*'/>
-                                <input type='tel' id='phone' className='bg-neutral-200 rounded-sm  p-2 w-full' placeholder='Telefonszám'/>
+                                <input type='text' required id='irszam' className='border border-neutral-300 eutral-200 rounded-sm p-2 w-full' placeholder='Irányítószám*'/>
+                                <input type='email' required id='email' className='border border-neutral-300 rounded-sm p-2 w-full' placeholder='E-mail cím*'/>
+                                <input type='tel' id='phone' className='border border-neutral-300 rounded-sm  p-2 w-full' placeholder='Telefonszám'/>
 
                               </div>
 

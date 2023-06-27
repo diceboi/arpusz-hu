@@ -3,9 +3,9 @@ import nodemailer from "nodemailer";
 
 export default async function CalcAPI(req, res) {
 
-    const { type, vastagsag, felulet, zipcode, email, bruttoar, nettoar } = req.body;
+    const { type, vastagsag, felulet, zipcode, email, bruttoar, nettoar, telefon } = req.body;
     const user = process.env.user;
-    const customFrom = "Szabó Árpád, Arpusz.hu <info@arpusz.hu>";
+    const customFrom = "Szabó Árpád, Arpusz.hu <kapcsolat.arpusz@gmail.com>";
 
     const data = {
         type,
@@ -14,7 +14,8 @@ export default async function CalcAPI(req, res) {
         zipcode,
         email,
         bruttoar,
-        nettoar
+        nettoar,
+        telefon
     };
 
     const transporter = nodemailer.createTransport({
@@ -28,13 +29,20 @@ export default async function CalcAPI(req, res) {
     });
 
     try {
+
+        let firstMailSubject = `[HÍVD FEL] Új árkalkuláció történt ${email} részéről`;
+
+        if (!telefon) {
+        firstMailSubject = `[ÍRJ NEKI E-MAILT] Új árkalkuláció történt ${email} részéről`;
+        }
+        
         const mail = await transporter.sendMail({
             from: "Arpusz.hu Kalkulátor",
             to: "szasz.szabolcs1995@gmail.com",
             replyTo: "szasz.szabolcs1995@gmail.com",
-            subject: `Új kalkuláció történt ${email} részéről`,
+            subject: firstMailSubject,
             html: `
-                <h1>Szia Árpi! Árkalkalkuláció történt az oldalon az alábbi adatokkal:</h1>
+                <h1>Szia Attila! Árkalkalkuláció történt az oldalon az alábbi adatokkal:</h1>
                 <p>Szigetelés típusa: ${type}</p>
                 <p>Szigetelés vastagsága: ${vastagsag} cm</p>
                 <p>Szigetelni kívánt felület: ${felulet} m2</p>
@@ -42,6 +50,7 @@ export default async function CalcAPI(req, res) {
                 <p>Szigetelés kalkulált bruttó ára: ${bruttoar} Ft </p>                
                 <p>Helyszín irányítószáma: ${zipcode}</p>
                 <p>Ügyfél email címe: ${email}</p>
+                <p>Ügyfél telefonszáma címe: ${telefon}</p>
             `,
         });
 
@@ -62,6 +71,7 @@ export default async function CalcAPI(req, res) {
                 <p>Szigetelés kalkulált bruttó ára: ${bruttoar} Ft </p>
                 <p>Irányítószámod: ${zipcode}</p>
                 <p>E-mail címed: ${email}</p>
+                <p>Telefonszámod: ${telefon}</p>
                 <br>
                 <h3>Amennyiben szeretnél visszahívást kérni, kérlek küld el erre a levélre válaszolva a telefonszámodat, és mi lehetőség szerint még a mai napon visszahívunk.</h3>
                 <h3>Ha bármivel kapcsolatban kérdésed lenne, vagy megbíznál bennünket, keress minket bátran az alábbi elérhetőségeken:</h3>
