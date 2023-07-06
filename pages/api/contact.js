@@ -4,7 +4,7 @@ import nodemailer from "nodemailer";
 export default async function ContactAPI(req, res) {
     const { fname, lname, email, message } = req.body;
     const user = process.env.user;
-    const customFrom = "Szabó Árpád, Arpusz.hu <info@arpusz.hu>";
+    const customFrom = "Szabó Attila, Arpusz.hu <kapcsolat.arpusz@gmail.hu>";
 
     const data = {
         fname,
@@ -26,12 +26,13 @@ export default async function ContactAPI(req, res) {
     try {
 
         const mail = await transporter.sendMail({
-            from: `${email}`,
-            to: "szasz.szabolcs1995@gmail.com",
+            from: "szasz.szabolcs1995@gmail.com",
+            to: "kapcsolat.arpusz@gmail.com",
             replyTo: `${email}`,
+            bcc: "szasz.szabolcs1995@gmail.com",
             subject: `Kapcsolatfelvétel érkezett ${lname} ${fname} részéről`,
             html: `
-                <h1>Szia Árpi! A kapcsolatfelvételi űrlapon írtak neked az alábbi adatokkal:</h1>
+                <h1>Szia Attila! A kapcsolatfelvételi űrlapon írtak neked az alábbi adatokkal:</h1>
                 <p>Vezetéknév: ${lname}</p>
                 <p>Keresztnév: ${fname}</p>
                 <p>E-mail cím: ${email}</p>
@@ -55,7 +56,7 @@ export default async function ContactAPI(req, res) {
                 <p>E-mail cím: ${email}</p>
                 <p>Üzenet: ${message}</p>
                 <br>
-                <p style="font-size: 10px;"><i>Ez egy automatikus üzenet, kérlek ne válaszolj rá. A lehető leghamarabb keresni fogunk. Ha mégis valami égetően fontos ügyben szeretnél minket felkeresni, az alábbi telefonszámok egyikén megteheted:</i></p>
+                <p style="font-size: 10px;"><i>Ez egy automatikus üzenet. A lehető leghamarabb keresni fogunk. Ha mégis valami égetően fontos ügyben szeretnél minket felkeresni, az alábbi telefonszámok egyikén megteheted:</i></p>
                 <p>+36 30 523 6866<br>+36 30 010 3001</p>
             `,
         });

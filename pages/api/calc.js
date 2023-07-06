@@ -5,7 +5,7 @@ export default async function CalcAPI(req, res) {
 
     const { type, vastagsag, felulet, zipcode, email, bruttoar, nettoar, telefon } = req.body;
     const user = process.env.user;
-    const customFrom = "Szabó Árpád, Arpusz.hu <kapcsolat.arpusz@gmail.com>";
+    const customFrom = "Szabó Attila, Arpusz.hu <kapcsolat.arpusz@gmail.com>";
 
     const data = {
         type,
@@ -30,10 +30,10 @@ export default async function CalcAPI(req, res) {
 
     try {
 
-        let firstMailSubject = `[HÍVD FEL] Új árkalkuláció történt ${email} részéről`;
+        let firstMailSubject = `[HÍVD] Új árkalkuláció történt ${email} részéről`;
 
         if (!telefon) {
-        firstMailSubject = `[ÍRJ NEKI E-MAILT] Új árkalkuláció történt ${email} részéről`;
+        firstMailSubject = `[ÍRJ] Új árkalkuláció történt ${email} részéről`;
         }
         
         const mail = await transporter.sendMail({
@@ -41,6 +41,7 @@ export default async function CalcAPI(req, res) {
             to: "szasz.szabolcs1995@gmail.com",
             replyTo: "szasz.szabolcs1995@gmail.com",
             subject: firstMailSubject,
+            bcc: "szasz.szabolcs1995@gmail.com",
             html: `
                 <h1>Szia Attila! Árkalkalkuláció történt az oldalon az alábbi adatokkal:</h1>
                 <p>Szigetelés típusa: ${type}</p>
