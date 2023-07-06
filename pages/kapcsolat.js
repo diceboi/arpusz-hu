@@ -65,7 +65,7 @@ export default function Kapcsolat() {
                 
             </div>
             <form onSubmit={handleSubmit} className='flex flex-col gap-4 w-11/12 lg:w-1/3'>
-            <p className='text-xs'>A csillaggal(*) jelölt mezők kitöltése kötelező</p>
+                <p className='text-xs self-center'>A csillaggal(*) jelölt mezők kitöltése kötelező</p>
                 <input type='lname' id='lname' placeholder='*Vezetéknév' required className='border border-neutral-200 p-2 bg-white'/>
                 <input type='fname' id='fname' placeholder='*Keresztnév' required className='border border-neutral-200 p-2 bg-white'/>
                 <input type='email' id='email' placeholder='*E-mail cím' required className='border border-neutral-200 p-2 bg-white'/>
@@ -85,6 +85,9 @@ export default function Kapcsolat() {
                         </span>
                     )}
                 </button>
+
+                <p className='flex flex-col text-center text-sm w-full py-4'>A Küldés gombra kattintva elfogadom az <a href='#' className='text-[#06a452] cursor-pointer'>adatkezelési tájékoztatóban</a> foglaltakat.</p>
+                
                 <p className='text-center text-xl m-auto pb-16 pt-12'>Ha árat szeretnél számolni, 3 lépésben könnyedén megteheted felesleges várakozás nélkül.</p>
             </form>          
         </section>
