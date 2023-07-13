@@ -38,7 +38,7 @@ export default async function CalcAPI(req, res) {
         
         const mail = await transporter.sendMail({
             from: "Arpusz.hu Kalkulátor",
-            to: "szasz.szabolcs1995@gmail.com",
+            to: "kapcsolat.arpusz@gmail.com",
             replyTo: "szasz.szabolcs1995@gmail.com",
             subject: firstMailSubject,
             bcc: "szasz.szabolcs1995@gmail.com",
