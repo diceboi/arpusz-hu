@@ -11,6 +11,7 @@ import Head from 'next/head'
 export default function Kalkulator() {
 
 const [isOpen1, setIsOpen1] = useState(false);
+const [selectedType, setSelectedType] = useState(null);
 
 const [isFirstStepHighlighted, setIsFirstStepHighlighted] = useState(true);
 const [isSecondStepHighlighted, setIsSecondStepHighlighted] = useState(false);
@@ -50,6 +51,7 @@ const handleSliderChange = (event) => {
 };
 
 const imageUrl = `/rangeslider/${value}slider.svg`;
+
 
 //Kalkulátor --------------------------------------------------
 
@@ -147,6 +149,7 @@ useEffect(() => {
 
 const handleRadioChange = () => {
   let type = document.querySelector('input[name="status"]:checked').dataset.type;
+  const selectedRadio = document.querySelector('input[name="status"]:checked');
   let thicknessInput = document.getElementById("vastagsag");
 
   if (type === "Zárt cellás") {
@@ -157,6 +160,12 @@ const handleRadioChange = () => {
     thicknessInput.min = "10";
     thicknessInput.max = "30";
     thicknessInput.step = "5";
+  }
+
+  if (selectedRadio) {
+    setSelectedType(selectedRadio.dataset.type);
+  } else {
+    setSelectedType(null); // Ha nincs kiválasztva típus, akkor null-ra állítsd
   }
 };
 
@@ -298,7 +307,7 @@ async function handleSubmit(event) {
           <button onClick={thirdStep} style={{background: isThirdStepHighlighted ? '#06A452' : '#e5e5e5', color: isThirdStepHighlighted ? '#fff' : '#000'}} className='flex justify-center items-center  rounded-full w-10 h-10 transition-all'>3.</button>
         </div>
       
-        <div className='w-[360px] lg:w-[1024px] border rounded-xl border-neutral-200 h-auto lg:h-[50vh] my-8 mx-auto shadow-xl overflow-hidden'>
+        <div className='w-[360px] lg:w-[1024px] border rounded-xl border-neutral-200 h-auto lg:min-h-[500px] my-8 mx-auto shadow-xl overflow-hidden'>
 
             <div style={{
               marginLeft: isThirdStepHighlighted ? '-2048px' : isSecondStepHighlighted ? '-1024px' : isFirstStepHighlighted ? '0px' : '0px',
@@ -318,10 +327,9 @@ async function handleSubmit(event) {
                           <label htmlFor="published" className="flex flex-col justify-center items-center border border-neutral-200 rounded-xl h-full p-8 hover:shadow-xl transition-all  cursor-pointer peer-checked/published:bg-[#06A452] peer-checked/published:text-white"><p className=' uppercase text-md lg:text-2xl font-black'>Zárt cellás</p> púrhab szigetelés</label>
                         
                         </fieldset>
-
-
+                          
                         <div className='flex gap-4'>
-                          <button onClick={secondStep} className='py-2 px-4 bg-gradient-to-r from-[#06A452] to-[#0DC666] text-white border-transparent rounded-md'>Tovább</button>
+                          <button onClick={secondStep} disabled={!selectedType} className='py-2 px-4 bg-gradient-to-r from-[#06A452] to-[#0DC666] text-white border-transparent rounded-md'>Tovább</button>
                         </div>
                     </div>
                 </div>
