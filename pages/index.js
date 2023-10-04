@@ -21,6 +21,7 @@ export default function Home() {
     <>
     <Head>
       <title>Púrhab Szigetelés - Online Árkalkuláció - Arpusz.hu</title>
+      <meta name="title" content="Púrhab Szigetelés - Online Árkalkuláció - Arpusz.hu" key="desc" />
         <meta name="description" content="Lépj át a 21. századba a bizonyítottan legjobb, széles körben is használt púrhab szigeteléssel. Legyen szó tető szigetelésről, aljzat vagy lábazat szigetelésről, a púrhab minden problémára a legjobb orvosság!" key="desc" />
         <meta
           property="og:Hő, hang és vízszigetelés púrhabbal - Arpusz.hu"
