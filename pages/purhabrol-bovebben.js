@@ -225,7 +225,6 @@ export default function PurhabrolBovebben() {
 
             <div className='flex flex-col gap-4 lg:flex-row w-11/12 lg:w-8/12 items-center border-t border-neutral-300 mt-8'>
 
-
               <div className='flex flex-col items-center lg:items-start w-11/12 lg:w-1/2 py-12'>
 
 
